@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+
+	@keyframes slidesInFromLeft {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+	75% { 
+		transform: translateX(15%);
+	}
+  100% {
+      transform: translateY(0);
+      opacity: 1 ;
+}
+	}
+@keyframes slidesInFromRight {
+	 0% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+	75% { 
+		transform: translateX(-15%);
+	}
+  100% {
+      transform: translateY(0);
+      opacity: 1 ;
+}
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+.home {
+    float: right;
+}
+.navigation {
+	float: left;
+	
+}
+li a {
+    display: block;
+    color: white;
+	font-family: Roboto;
+	font-size: 25px;
+    text-align: center;
+    padding: 20px 60px;
+	text-decoration: none;
+	-webkit-transition:background .2s,font-size .2s, ;
+		transition: all .2s;
+}
+
+li a:hover {
+font-size: 30px;
+background: rgba(0,108,244,1.00)
+}
+#Info {
+	background-image: url()
+	width: 80%;
+	padding-top:10px; 
+	position: absolute;
+	margin: auto;
+	right:0;
+	left: 0;
+}
+#mondeimage img {
+	border: 5px solid rgba(0,0,0,1.00);
+	border-radius: 10px;
+	float:left;
+	width: 25%;
+	animation: 1s ease-out 0s 1 slidesInFromLeft;
+	margin: 10px
+}
+#mondeinfo{
+	width: 50%;
+	float: right;
+	animation: 1s ease-out 0s 1 slidesInFromRight;
+	margin: auto;
+	top: 0;
+	padding-right: 10px;
+	margin-top: auto;
+}
+h1 {
+	font-family: Roboto;
+	font-size: 90px;
+	text-align: center;
+}
+p {
+	font-size: 45px;
+	font-family:  "Lucida Sans Unicode";
+	background: rgba(255,255,255,0.7);
+	border: 5px solid black;
+	border-radius: 10px;
+	
+}
+body {
+	background-repeat: no-repeat;
+	background-size: cover;
+-webkit-animation-name: background;
+		-webkit-animation-duration: 20s;
+		-webkit-animation-iteration-count: infinite;
+		animation-name: background;
+		animation-duration: 20s;
+		animation-iteration-count: infinite;
+	}
+@keyframes background {
+   0%   {background-image:url(ITHS.png);}
+		50% {background-image:url(ITHSblurred.png)}
+	100% {background-image:url(ITHS.png);}
+}

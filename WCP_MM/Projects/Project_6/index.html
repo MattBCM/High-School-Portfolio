@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Credit Score Survey</title>
+<link rel="stylesheet" href="indexcss.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="icon" href="../../Index/my_logo_beta.png">
+</head>
+
+<body>
+	<ul>
+  		<li id="homepageimage" ><img src="../../Index/my_logo_beta.png" width="80" style="padding: 10px 10px" id="topImage"> </li>
+  		<li><p style="letter-spacing: 10px" class="titlehomepage">Project #6 - Credit Score Survey</p></li>
+	</ul>
+  <h1 id="title">Credit Score Survey</h1>
+  
+  <div id="survey-container">
+  <p id="description">This is a survey to let you know what your credit score could be. The questions range from daily tasks to financial future. At the end you will recieve an estimate on what score you'll recieve.</p>
+	  
+  <!-- USELESSS INFORMATION -->
+  <form name="credit">
+    <div class="form-row">
+      <label for="name" id="name-label" class="simple-label" name="name">Name: </label>
+      <input id="name" placeholder="Enter you name">      
+    </div>
+
+    <div class="form-row">
+      <label for="email" id="email-label" class="simple-label">Email: </label>
+      <input id="email" placeholder="Enter you email">
+     </div>
+    <div class="form-row">
+      <label for="number" id="number-label" class="simple-label">Age: </label>
+      <input  id="number" min="0" max="100" placeholder="Enter your age" name="age">
+      </div><br>
+	  
+	  
+	  
+    <div class="form-row">
+      <label for="dropdown" id="label-dropdown" class="long-label" > 1. Do you have a job?</label>
+     <select id="dropdown">
+      <option></option>
+      <option value="1">Yes</option>
+      <option value="2">No</option>
+    </select>
+    </div>
+	  
+	  <div class="form-row">
+      <label for="dropdown" id="label-dropdown1" class="long-label">2. What is your attendance rate in school?</label>
+     <select id="dropdown1">
+      <option></option>
+      <option value="1">90% ~ 100%</option>
+      <option value="2">75% ~ 89%</option>
+      <option value="3">60% ~ 74%</option>
+      <option value="4">0% ~ 59%</option>
+    </select>
+    </div>
+	  <div class="form-row">
+      <label for="dropdown" id="label-dropdown2" class="long-label">3. How many credit cards do you own?</label>
+     <select id="dropdown2">
+     <option></option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3+</option>
+    </select>
+    </div>
+	  <div class="form-row">
+      <label for="dropdown" id="label-dropdown3" class="long-label">4. Are you in debt?</label>
+     <select id="dropdown3">
+     <option></option>
+      <option value="1">Yes</option>
+      <option value="2">No</option>
+    </select>
+    </div>
+	  <div class="form-row">
+      <label for="dropdown" id="label-dropdown4" class="long-label">5. Do you owe any late fees?</label>
+     <select id="dropdown4">
+     <option></option>
+      <option value="1">Yes</option>
+      <option value="2">No</option>
+    </select>
+    </div>
+	  <div class="form-row">
+      <label for="dropdown" id="label-dropdown6" class="long-label">6. Do you own any assets?</label>
+     <select id="dropdown6">
+     <option></option>
+      <option value="1">Yes</option>
+      <option value="2">No</option>
+    </select>
+    </div>
+	  <div class="form-row">
+      <label for="dropdown" id="label-dropdown7" class="long-label">7. Do you own any pets?</label>
+     <select id="dropdown7">
+     <option></option>
+      <option value="1">Yes</option>
+      <option value="2">No</option>
+    </select>
+    </div>
+	  <div class="form-row">
+      <label for="dropdown" id="label-dropdown8" class="long-label">8. Do you owe any money to family members or friends?</label>
+     <select id="dropdown8">
+     <option></option>
+      <option value="1">Yes</option>
+      <option value="2">No</option>
+
+    </select>
+    </div>
+	  <div class="form-row">
+      <label for="dropdown" id="label-dropdown9" class="long-label">9. Did you do any community service recently?</label>
+     <select id="dropdown9">
+     <option></option>
+      <option value="1">Yes</option>
+      <option value="2">No</option>
+    </select>
+    </div>
+	  <div class="form-row">
+      <label for="dropdown" id="label-dropdown10" class="long-label">10. When do you plan out your budget?</label>
+     <select id="dropdown10">
+     <option></option>
+      <option value="1">Extra early</option>
+      <option value="2">When I get older</option>
+	  <option value="3">Never</option>
+    </select>
+    </div>
+	  
+	   <div class="form-row">
+      <label for="dropdown" id="label-dropdown11" class="long-label">11. How often do you cook?</label>
+     <select id="dropdown11">
+     <option></option>
+      <option value="1">All The Time</option>
+      <option value="2">Most of the time</option>
+	  <option value="3">Sometimes</option>
+		<option value="4">Very little</option>
+		 <option value="5">Never</option>
+    </select>
+    </div>
+	   <div class="form-row">
+      <label for="dropdown" id="label-dropdown12" class="long-label">12. Choose one that is most important for you?</label>
+     <select id="dropdown12">
+     <option></option>
+      <option value="1">Air Pods</option>
+      <option value="2">Water</option>
+	  <option value="3">Designer Sneakers</option>
+	  <option value="4">Groceries</option>
+
+    </select>
+    </div>
+	  <div class="form-row">
+      <label for="dropdown" id="label-dropdown13" class="long-label">13. Would you lend some money to the poor?</label>
+     <select id="dropdown13">
+     <option></option>
+      <option value="1">Yes</option>
+      <option value="2">No</option>
+    </select>
+    </div>
+	  <div class="form-row">
+      <label for="dropdown" id="label-dropdown14" class="long-label">14. If you break something, will you pay it back in full?</label>
+     <select id="dropdown14">
+     <option></option>
+      <option value="1">Yes</option>
+      <option value="2">No</option>
+    </select>
+    </div>
+		  <div class="form-row">
+      <label for="dropdown" id="label-dropdown15" class="long-label">15. Do you think you're responsible enough to run a multi-million dollar company?</label>
+     <select id="dropdown15">
+     <option></option>
+      <option value="1">Yes</option>
+      <option value="2">No</option>
+    </select>
+    </div>
+    
+    <div class="form-row">
+      <label for="dropdown" id="label-dropdown16" class="long-label">16. Do you invest in stocks, bonds, mutual bonds, etc?</label>
+     <select id="dropdown16">
+     <option></option>
+      <option value="1">Yes</option>
+      <option value="2">No</option>
+    </select>
+    </div><br>
+
+	  
+	  <div class="submitButton">
+        <input type="button" value="Submit" id="submit1"></input>
+	  </div>
+	  <br>
+	  
+	  <div id="result">
+	  
+	  Result...</div><br>
+	  </div>
+  </form>
+	</div>
+</body>
+<script src="../../jquery331min.js"></script>
+<script src="script.js"></script>
+</html>

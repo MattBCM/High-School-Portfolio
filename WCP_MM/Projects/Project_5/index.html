@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MJ Banking</title>
+<style>
+body {
+  margin:0;
+	
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  background-size: cover;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+li {
+  float: right;
+}
+	ul li a{
+		cursor: pointer;
+	}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-family: helvetica;
+  letter-spacing: 3px;
+  transition: all 0.3s ease-in;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+#majinTitle{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	margin: auto;
+  	left: 0;
+	right: 0;
+	background-image: url(Building_logo.png);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+#info{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	margin: auto;
+  	left: 0;
+	right: 0;
+	background-color: mintcream;
+}
+#logo{
+	margin: 0;
+  	position: absolute;
+ 	top: 50%;
+  	left: 50%;
+	color: white;
+	mix-blend-mode: multiply;
+	transform: translate(-50%, -50%);
+	font-size: 120px;
+	letter-spacing: 5px;
+	font-family: Helvetica;
+	background-color: salmon;
+	padding: 25px;
+}
+	h1{
+		color: black;
+	}
+#description{
+	position: absolute;
+	margin: auto 0;
+	width: 40%;
+	font-size: 25px;
+	padding:0 10px; 
+	font-family: helvetica;
+    margin: 0;
+	color: gray;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+#image{
+	width: 700px;
+	height: 400px;
+	background-color: grey;
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+	background-image: url(bank1.jpg);
+	background-size: cover;
+	background-position: center;
+	
+}
+</style>
+</head>
+
+<body>
+<ul>
+  <li id="typeNav"><a>Types Of Bank</a></li>
+  <li id="workNav"><a>How Does It Work?</a></li>
+  <li id="bankNav"><a>Banking</a></li>
+  <li id="homeNav"><a>Home</a></li>
+</ul>
+<div id="majinTitle">
+</div>
+<div id="info">
+	<div id="description">
+		<h1>What is a Bank?</h1><br><br>
+A bank is an industry that handles cash, credit, and other financial transactions. Banks
+provide a safe place to store extra cash and credit. They offer savings accounts,
+certificates of deposit, and checking accounts. Banks use these deposits to make loans.
+These loans include home mortgages, business loans, and car loans.
+	</div>
+	<div id="image">
+	</div>
+</div>	
+</body>
+<script src="../../jquery331min.js"></script>
+<script>
+$("#homeNav").on("click", function(){
+	document.querySelector('#majinTitle').scrollIntoView({ 
+	behavior: 'smooth'});
+});
+$("#bankNav").on("click", function(){
+	document.querySelector('#info').scrollIntoView({ 
+	behavior: 'smooth'});
+	$("#description").html("<h1>What is a Bank?</h1><br><br>A bank is an industry that handles cash, credit, and other financial transactions. People use thebank to store their money in a safe place. A bank usually offers either a savings accounts,certificates of deposit, or checking accounts. The money you store in a bank is used forloans.These loans include home mortgages, business loans, and car loans. This is what keepsthe bank afloat and help them grow over time");
+	$("#image").css('background-image', 'url(bank1.jpg)');
+});
+$("#workNav").on("click", function(){
+	document.querySelector('#info').scrollIntoView({ 
+	behavior: 'smooth'});
+	$("#description").html("<h1>How does it work?</h1><br><br>Banks are your safest bet for storing extra cash you might have or jump keeping them in oneplace organized. The Federal Deposit InsuranceCorporation (FDIC) insures them each of thebanks to preserve and promote public confidence. One big benefit of depositing money to banksis that they pay savers interest rates or a small percent of the deposit. Also, banks can turnevery one of those saved dollars into any currency you like to any currency and you onlyneed to keep 10 percent of each deposit on hand. That regulation is called the reserverequirement. Banks lend the other 90 percent out. They make money by charging higherinterest rates on their loans than they pay for deposits.");
+	$("#image").css('background-image', 'url(image1.png)');
+});
+$("#typeNav").on("click", function(){
+	document.querySelector('#info').scrollIntoView({ 
+	behavior: 'smooth'});
+	$("#description").html("<h1>Types of banks</h1><br><br>There are different types of banks. Unite banking is a bank that is single bank thats is small andprovides finincial services to its local community. Branch banking refer to a bank that is wellconnected to one or more banks in an area. Retail banking is used my consumers primarilybecause it is for the mass market.Then there are Commercial banks that provide services toprivate individuals and to businesses.Community banks are smaller than commercial banks.They concentrate on the localmarket. They provide more personalized service and buildrelationships with their customers. Lastly, Investment banking is used for corporations throughinitial public stock offerings or bonds. They also facilitate mergers and acquisitions and theyoperate hedge funds for high net worth individuals. The largest U.S. investment banks are Bankof America, Merrill Lynch, Citi, Goldman Sachs, J.P. Morgan, and Morgan Stanley.");
+	$("#image").css('background-image', 'url(image2.png)');
+});
+</script>
+</html>

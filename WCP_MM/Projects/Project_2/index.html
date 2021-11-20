@@ -1,0 +1,111 @@
+<!doctype html>
+<!--home page-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>LifeStyle Homepage</title>
+<link rel="icon" href="images/logo.png">
+<script src="../../jquery331min.js"></script>
+<script src="jquery.cycle2.min.js"></script>
+<script src="jquery.cycle2.tile.min.js"></script>
+<script src="jquery.cycle2.caption2.min.js"></script>
+<script src="parallax.js-1.5.0/parallax.min.js"></script>
+<script src="parallax.js-1.5.0/parallax.js"></script>
+<script src="Mission_Statement/slick-1.8.1/slick/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="Mission_Statement/slick-1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="Mission_Statement/slick-1.8.1/slick/slick-theme.css"/>
+<link rel="stylesheet" type="text/css" href="project2.css">
+</head>
+
+<body>
+<!-- Header -->
+<!--THIS IS THE TOP NAVIGATION BAR-->
+<div class="container">
+<ul id="TopNavi">
+	<li id="navImage"><img src="images/logo.png"></li>
+	<li class="hoverEffect"><a style="letter-spacing: 3px" id="homeNavButton">Home</a></li>
+	<li><a style="letter-spacing: 10px">|</a></li>
+	<li class="hoverEffect"><a style="letter-spacing: 3px" id="missionNavButton" href="Mission_Statement/">Mission Statement</a></li>
+	<li><a style="letter-spacing: 10px">|</a></li>
+	<li class="hoverEffect"><a style="letter-spacing: 3px" id="buyNavButton" href="Shop/">Buy Now!</a></li>
+</ul>
+	</div>
+
+<!-- Body -->
+<center>
+	<div class="parallax" data-parallax="scroll" data-image-src="images/navHomeImage.png"></div>
+<div class="homeBody">
+	<p>Products</p>
+	<table id="homeTable">
+		<tr>
+			<th>
+<div class="cycle-slideshow"
+	 data-cycle-fx="tileSlide">
+          <img src="images/clothing/1.png" class="image"
+			   >
+          <img src="images/clothing/2.png" class="image">
+          <img src="images/clothing/3.png" class="image">
+        </div>
+			</th>
+
+			<th>
+        <div class="cycle-slideshow" data-cycle-fx="tileSlide">
+          <img src="images/clothing/5.png" class="image">
+          <img src="images/clothing/6.png" class="image">
+          <img src="images/clothing/7.png" class="image">
+				</div></th>
+		</tr>
+
+	</table>
+		</div>
+	</center>
+	<!-- Footer -->
+<center>
+<div class="homeBody">
+<div class="cycle-slideshow" data-cycle-fx="tileSlide" data-cycle-tile-vertical="false" style="z-index: 0" data-cycle-speed="1000" data-cycle-timeout="5000">
+	<img src="images/homeSlider1.png" width="100%">
+	<img src="images/homeSlider2.png" width="100%">
+	</div>
+		<p>Meet The Team</p><br>
+		<table id="teamTable">
+		<tr>
+			<th>
+		<div class="cycle-slideshow" id="teamImage"
+    data-cycle-fx="tileSlide"
+    data-cycle-timeout="0"
+    data-cycle-prev="#prev"
+    data-cycle-next="#next"
+	data-cycle-tile-count="30"
+	data-cycle-caption-plugin="caption2"
+	data-cycle-tile-vertical="false"
+	style="z-index: 0"
+    >
+    <div class="cycle-overlay" id="nameChange"></div>
+		<img src="images/andoni.jpg" class="image"
+			 data-cycle-title="Andoni Nolasco"
+        data-cycle-desc="The Leader">
+		<img src="images/nathan.jpg" class="image"
+			 data-cycle-title="Nathan Vazquez"
+        data-cycle-desc="The Designer">
+		<img src="images/chime.png" class="image"
+			 data-cycle-title="Tenzin Chime"
+        data-cycle-desc="The Tailor">
+		<img src="images/andy.jpg" class="image"
+			 data-cycle-title="Andy Jiang"
+        data-cycle-desc="The Planner">
+				</div>
+			</th>
+			<th style="padding: 0px 10px">
+			<span id=prev class="navButtons">&lt;&lt;Prev</span>
+			<span class="navButtons" >  |</span>
+			<span id=next class="navButtons"> Next&gt;&gt;</span>
+			</th>
+			</tr>
+		</table>
+		<br>
+	</div>
+	</div>
+	</center>
+<div id="footer">Made by Scions Inc. All Rights Reserved</div>
+</body>
+</html>

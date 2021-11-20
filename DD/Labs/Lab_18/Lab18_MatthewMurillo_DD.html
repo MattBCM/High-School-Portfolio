@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lab 18 Matthew Murillo</title>
+<link rel="stylesheet" href="Lab18.css">
+<link rel="icon" type="image/png" href="http://techteach.us/Web2019/Mmatthew/Labs/Lab_7/my_logo_beta.png">
+</head>
+
+<body>
+<center>
+<h1 id="center">Lab #18</h1>
+<h2>Digital Design</h2>
+<h3>Matthew Murillo</h3>
+<h4>3-15-18</h4>
+<div>
+<form name="number">
+Enter The First Number: <input type="text" class="textbox" id="one" name="1"><br>
+Enter The Second Number: <input type="text" class="textbox" id="two" name="2"><br>	
+</form><br>
+
+<form name="results">
+To Add the Numbers, Click Here: <input type="button" class="button" name="addition" value="Enter" onClick="audio(); plus();"><br>
+To Subtract the Numbers, Click Here: <input type="button" class="button" name="subtraction" value="Enter" onClick="audio(); minus();"><br>
+To Multiply the Numbers, Click Here: <input type="button" class="button" name="multiply" value="Enter" onClick="audio(); multi();"><br>
+To Divide the Numbers, Click Here: <input type="button" class="button" name="divide" value="Enter" onClick="audio(); divi();"><br>
+To Find the Numbers' Modulo, Click Here: <input type="button" class="button" name="modulo" value="Enter" onClick="audio(); modu();">
+	
+</form>	
+	
+<p id="output">your number is...</p>	
+</div>
+<script>
+function plus()	{
+var x = document.getElementById("one").value;
+var y = document.getElementById("two").value;
+var z = +x + +y; 
+document.getElementById("output").innerHTML= z+'!' ;
+}
+function minus() {
+var x = document.getElementById("one").value;
+var y = document.getElementById("two").value;
+var z = +x - +y; 
+document.getElementById("output").innerHTML= z+'!';
+}
+function multi() {
+var x = document.getElementById("one").value;
+var y = document.getElementById("two").value;
+var z = +x * +y;
+document.getElementById("output").innerHTML= z+'!';
+}
+function divi() {
+var x = document.getElementById("one").value;
+var y = document.getElementById("two").value;
+var z = +x / +y;
+document.getElementById("output").innerHTML= z+'!';	
+}
+function modu() {
+var x = document.getElementById("one").value;
+var y = document.getElementById("two").value;
+var z = +x % +y;
+document.getElementById("output").innerHTML= z+'!';	
+}
+function audio() {
+document.getElementById("victory").play();
+}
+</script>
+<audio id="victory" src="../Lab_17/victory.mp3" preload="auto"></audio>
+	</center>
+</body>
+</html>

@@ -1,0 +1,146 @@
+body {
+	font-size: 14px;
+	line-height: 1.8; /* unitless line-height value on body fixes inheritance issues */
+	margin: 0px;
+	min-width: 790px;
+}
+img {
+	border: 0;
+	vertical-align: bottom;
+}
+a {
+	color: #c44214;
+	text-decoration: none;
+}
+a:hover {
+	color: #faa61a;
+}
+h1 {
+	font-size: 2em;
+	margin: 2.2em 0 .1em 0;
+	line-height: 1.3em;
+	font-weight: 200;
+}
+h2 {
+	font-size: .9em;
+	line-height: 1.9em;
+	color: #a2a50d;
+	margin: 0;
+	margin-bottom: .6em;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+p {
+	font-size: 1em;
+	line-height: 1.9em;
+	margin: 0;
+	margin-bottom: .7em;
+	text-align: left;
+}
+.contentWrapper {
+	width: 750px;
+	padding: 0 20px;
+	margin: 0 auto;
+	position: relative;
+}
+#header {
+	font-size: .9em;
+	color: #fff;
+	background: #101414 url(../img/camera.jpg);
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+#header .contentWrapper {
+	height: 165px;
+}
+#header a {
+	color: #fff;
+}
+#header a:hover {
+	color: #faa61a;
+}
+#fronionLogo {
+	position: absolute;
+	left: 20px;
+	bottom: 15px;
+}
+#headerExtras {
+	text-align: right;
+	position: absolute;
+	right: 0;
+	bottom: 15px;
+	line-height: 1.6em;
+}
+#moreTopNews {
+	margin-top: 10px;
+	clear: both;
+	overflow: hidden;
+	position: relative;
+}
+#moreTopNews h3 {
+	font-size: 1.15em;
+	line-height: 1.5em;
+	margin: .5em 0 0 0;
+	font-weight: 200;
+}
+.reportStory {
+	text-transform: uppercase;
+	font-size: .95em;
+}
+#footer {
+	font-size: .7em;
+	text-transform: uppercase;
+	margin: 50px auto;
+	color: #999;
+}
+#moreTopNews .item{
+	margin: 3px;
+}
+#moreTopNews .item img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+a {
+	text-decoration: none;
+	display: inline-block;
+	padding: 8px 16px;
+	transition:all;
+	transition-duration: 0.2s;
+	transition-timing-function: ease;
+}
+
+a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.previous {
+	background-color:black;
+	color: white;
+}
+
+.next {
+	background-color:black;
+	color: white;
+}
+
+.round {
+	border-radius: 50%;
+}
+.owl-prev,
+.owl-next {
+	position: absolute;
+	top: 45%;
+	transform: translateY(-75%);
+}
+
+.owl-prev {
+	left: -.5rem;
+}
+
+.owl-next {
+	right: -.5rem;
+}

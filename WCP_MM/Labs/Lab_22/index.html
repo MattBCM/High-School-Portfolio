@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+<style>
+	body{
+		background: url(../../Projects/Project_6/background.png);
+		background-size: cover;
+	}
+	p{
+	margin: auto;
+  	left: 0;
+	right: 0;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	text-align: center;
+	vertical-align: middle;
+	font-size: 30px;
+	}
+	
+</style>
+</head>
+<body>
+
+  <p onClick="makeGreen()">Click On Me To Make Me Green<br><br> Check Out The Console Log Also!</p>
+	
+
+  <script>
+    const dogs = [{ name: 'Clifford', age: 10 }, { name: 'Jeff', age: 45 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '60px';
+	  p.style.textShadow = '0px 0px 8px #000000';
+	  p.innerHTML = 'WOW, IM GREEN NOW! <br><br>Check Out The Console Log Also!';
+    }
+
+    // Regular
+    console.log('hello');
+
+    // Interpolated
+    console.log('Hello I am a %s string!', '💩');
+
+    // Styled
+    // console.log('%c I am some great text', 'font-size:50px; background:red; text-shadow: 10px 10px 0 blue')
+
+    // warning!
+    console.warn('OH NOOO');
+
+    // Error :|
+    console.error('Wow, What a joke');
+
+    // Info
+    console.info('Fortnite deserves to die, Minecraft 4 Life');
+
+    // Testing
+    const p = document.querySelector('p');
+
+    console.assert(p.classList.contains('ouch'), 'That is wrong!');
+
+    // clearing
+    console.clear();
+
+    // Viewing DOM Elements
+    console.log(p);
+    console.dir(p);
+
+    console.clear();
+
+    // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(`${dog.name}`);
+    });
+
+    // counting
+
+    console.count('Steve');
+    console.count('Alex');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Alex');
+    console.count('Steve');
+    console.count('Alex');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Alex');
+
+    // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/BigCheekMan')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
+
+    console.table(dogs);
+
+  </script>
+</body>
+</html>

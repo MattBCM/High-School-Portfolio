@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Welcome to My Webpage!</title>
+<link rel="stylesheet" href="indexcss.css"></link>
+<link rel="icon" type="image/png" href="http://techteach.us/Web2019/Mmatthew/Labs/Lab_7/my_logo_beta.png"></link>
+</head>
+
+<body>
+	
+<!--THIS IS THE TOP NAVIGATION BAR-->
+	
+<ul id="TopNavi">
+  <li id="homepageimage"><img src="Index/my_logo_beta.png" width="135" style="padding: 10px 10px" id="topImage"> </li>
+  <li><p style="letter-spacing: 10px" id="titlehomepage">Matthew M's Homepage</p></li>
+</ul>
+	
+<!--ALL OF THE DIVS ARE THE SIDE MENU BARS, WHICH ALLOWS 
+LINKING TO OTHER PARTS OF MY WEBPAGE. -->
+	
+<div id="labs">
+	<p style="padding-top: 25px">Labs</p>	
+</div>
+<div id="projects">
+  <p style="padding-top: 25px">Projects</p>	
+</div>
+<div id="Blogger">
+	<a href="https://bcmblogzweb.blogspot.com/"><p style="padding-top: 25px">Blogger</p></a>	
+</div>
+<div id="TechTeach">
+  <p style="padding-top: 30px">TechTeach</p>	
+</div>
+<div id="VD">
+	<p style="padding-top: 30px">Visual Design</p>	
+</div>
+<div id="DD">
+	<a href="DD/"><p style="padding-top: 30px">Digital Design</p></a>	
+</div>
+	
+<!--THIS IS THE ACTUAL INFORMATION TO THE FRONT PAGE, IT HAS
+ALL OF THE DESCRIPTION ABOUT ME AND MY PERSONALITY-->
+	
+<div id="Statememt">
+	<p style="font-size: 30px">Who Am I?</p>
+	<center><img src="Index/ssbnewfoe_matthew.png" class="homepageImage"></img></center>
+	<p style="font-size: 20px ">My name is Matthew Murillo and I am a proud student at Information Technology High School at the Web Design Academy. </p>
+	<p style="font-size: 30px">Why Web Design?</p>
+	<center><img src="Index/bloggertest.png" class="homepageImage"></img></center>
+	<p style="font-size: 20px ">I decided to apply to the Web Design Academy, because I would like to gain the skill of programming. I believe that in the future, a lot of people would need to hire more programmers as our technology keep advancing. I also chose Web Design because I personally would like to code my own game when I gain the skills to.</p>
+	<p style="font-size: 30px">Main Goal?</p>
+	<center><img src="Index/sunset_bcm.png" class="homepageImage"></img></center>
+	<p style="font-size: 20px ">My main goal so far is to graduate with an Advance Regents Diploma and with a CTE Endorsement. Once I got that out of the way, I plan to take Computer Science as a major. It doesn't really matter what school I choose, as long as it offers Computer Science as a Major. Once I get my bachelors, im going to aim for a Masters.</p>
+	<p style="font-size: 30px">Hobbys?</p>
+	<center><img src="Index/bigchibiman.png" class="homepageImage"></img></center>
+	<p style="font-size: 20px ">For my spare time, I usually play a wide range of games with my friends or with my brother and sister. One game we hang out the most on is Minecraft, because obviously its the superior game compared to Fortnite. Other than gaming, I would code my webpage little by little just to find ways to improve on it. </p>
+	<audio src="WCP_MM/Index/OOF.mp3" preload="auto" id="oofsound"></audio>
+</div>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	//THIS JQUERY FUNCTION ALLOWS THE LOGO IMAGE TO TAKE YOU BACK TO THE MAIN INDEX
+	$(document).ready(function(){
+		$("#homepageimage").click(function(){
+			var img = $("#topImage");
+			img.animate({ width: '115px', padding: '20px 20px' }, 250);
+			img.animate({ width: '135px', padding: '10px 10px' }, 250);
+			$("#oofsound")[0].play();
+			});
+	});
+</script>

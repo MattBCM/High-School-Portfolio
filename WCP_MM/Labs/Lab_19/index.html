@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Cardio 💪💪</title>
+  <link rel="icon" href="../../Index/my_logo_beta.png">
+	<style>
+	
+	body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  background-image: url( ../../Projects/Project_6/background.png);
+	background-size: cover;
+	background-attachment: fixed;
+  margin: 0;
+  margin-top: 100px
+}
+	  #somethin{
+	position: relative;
+	margin: auto;
+  	left: 0;
+	right: 0;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	text-align: center;
+	vertical-align: middle;
+	font-size: 50px;
+	  }
+	ul {
+    	position: fixed;
+    	list-style-type: none;
+    	margin: 0;
+   	 	padding: 0;
+    	overflow: hidden;
+    	background-color: rgba(24,24,24,0.86);
+    	position: fixed;
+    	top: 0;
+    	width: 100%;
+		z-index: 1;
+	
+}
+
+	li {
+   	 	float: left;
+}
+
+	li p {
+    	display: block;
+    	color: white;
+    	text-align: center;
+   	 	padding-left: 20px;
+    	text-decoration: none;
+		font-family: "Helvetica";
+		font-size: 32px;
+	
+}
+	#topImage {
+		border-radius: 20px;
+}
+		#topImage:hover{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+  		<li id="homepageimage" ><img src="../../Index/my_logo_beta.png" width="80" style="padding: 10px 10px" id="topImage"> </li>
+  		<li><p style="letter-spacing: 10px" class="titlehomepage">Lab #19 - Array Cardio Day #2</p></li>
+	</ul>
+  <p><em id="somethin">Psst: have a look at the JavaScript Console <span>😉</span></em></p>
+  <script>
+	  
+//THIS JQUERY FUNCTION ALLOWS THE LOGO IMAGE TO TAKE YOU BACK TO THE MAIN INDEX	
+			
+		$("#homepageimage").click(function(){
+			var img = $("#topImage");
+			img.animate({ width: '70px', padding: '20px 20px' }, 250);
+			img.animate({ width: '80px', padding: '10px 10px' }, 250);
+			location.href = "../../../";
+			});	  
+	  
+    // ## Array Cardio Day 2
+    const people = [
+      { name: 'Foucault', year: 2002 },
+      { name: 'Ismael', year: 1999 },
+      { name: 'Leistmen', year: 2009 },
+      { name: 'Liu', year: 2005 }
+    ];
+    const comments = [
+      { text: 'Love this!', id: 523423 },
+      { text: 'Super good', id: 823423 },
+      { text: 'You are the best', id: 2039842 },
+      { text: 'Ramen is my fav food ever', id: 123523 },
+      { text: 'Nice Nice Nice!', id: 542328 },
+	  { text: 'My Monkey King', id: 209783794, teacher: 'foucault'  },
+	  { text: 'He teaches alright!', id: 238971733, teacher: 'foucault'},
+	  { text: 'so much I learned in this class', id: 233018472, teacher:'foucault' },
+	  { text: 'Welcome to my kingdom!', id: 208883413, teacher:'foucault' },
+	  { text: 'Very Funny', id: 209783794, teacher: 'ismael'  },
+	  { text: 'Anything going up must come down', id: 238971733, teacher: 'ismael'},
+	  { text: 'So boring...', id: 233018472, teacher:'ismael' },
+	  { text: 'I was so close to a multiple choice test', id: 208883413, teacher:'ismael' },
+	  { text: 'funny memes everyday', id: 209783794, teacher: 'leistman'  },
+	  { text: 'Greatest Teacher Ever', id: 238971733, teacher: 'leistman'},
+	  { text: 'He is the best of the best', id: 233018472, teacher:'leistman' },
+	  { text: 'Sweet Victory', id: 208883413, teacher:'leistman' },
+	  { text: 'Shut It!', id: 209783794, teacher: 'liu'  },
+	  { text: 'Very Relatable', id: 238971733, teacher: 'liu'},
+	  { text: '*slams paper in desk*', id: 233018472, teacher:'liu' },
+	  { text: 'Very crazy and hilarious', id: 208883413, teacher:'liu' },
+    ];
+    // Some and Every Checks
+    // Array.prototype.some() // is at least one person 19?
+    // const isAdult = people.some(function(person) {
+    //   const currentYear = (new Date()).getFullYear();
+    //   if(currentYear - person.year >= 19) {
+    //     return true;
+    //   }
+    // });
+    const isAdult = people.some(person => ((new Date()).getFullYear()) - person.year >= 19);
+    console.log({isAdult});
+    // Array.prototype.every() // is everyone 19?
+    const allAdults = people.every(person => ((new Date()).getFullYear()) - person.year >= 19);
+    console.log({allAdults});
+    // Array.prototype.find()
+    // Find is like filter, but instead returns just the one you are looking for
+    // find the comment with the ID of 823423
+    const comment = comments.find(comment => comment.id === 823423);
+    console.log(comment);
+    // Array.prototype.findIndex()
+    // Find the comment with this ID
+    // delete the comment with the ID of 823423
+    const index = comments.findIndex(comment => comment.id === 823423);
+    console.log(index);
+    // comments.splice(index, 1);
+    const newComments = [
+      ...comments.slice(0, index),
+      ...comments.slice(index + 1)
+    ];
+	  const foucault = comments.filter(foucault => foucault.teacher === 'foucault');
+    console.table(foucault);
+	  const ismael = comments.filter(ismael => ismael.teacher === 'ismael');
+    console.table(ismael);
+	  const leistman = comments.filter(leistman => leistman.teacher === 'leistman');
+    console.table(leistman);
+	  const liu = comments.filter(liu => liu.teacher === 'liu');
+    console.table(liu);
+  </script>
+</body>
+</html>

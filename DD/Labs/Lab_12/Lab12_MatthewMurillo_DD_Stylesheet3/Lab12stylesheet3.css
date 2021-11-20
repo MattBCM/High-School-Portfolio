@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* CSS Document */
+
+	.list {
+		background: #2f4f4f;
+		font-family: Bookman;
+			
+	}
+	body {
+		background: #8fbc8f;
+
+	}
+	.information {
+		font-family: Trebuchet MS;
+		border: groove;
+		border-color: #385a66;
+	}
+	#paragraph {
+		font-family: Trebuchet MS;
+	}	
+	

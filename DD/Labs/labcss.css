@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+
+@keyframes slidesInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+      50% { 
+        transform: translateY(15%);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1 ;
+    }
+}
+  
+@keyframes bgcolor {
+    0%   {
+        background-color:#00E8E2;
+    } 50% {
+        background-color:#00FFC1;
+    } 100% {
+        background-color:#00E8E2; 
+    }
+}
+
+@keyframes fontcolor {
+    0%   {
+        color: black
+    }
+    50%     {
+        color: dimgray
+    }
+    100% {
+        color: black
+    }
+}
+
+body {
+    background-color:#00EFFF;
+    animation: bgcolor ease 30s infinite;target="_blank"target="_blank"target="_blank"target="_blank"
+
+}
+
+
+td {
+    padding: 10px;
+}
+
+li {
+    border: 2px solid black;
+    list-style-type: none;
+	width: 150px ;
+}
+
+h1 {
+    font-family: Roboto;
+    font-size: 80px;
+	letter-spacing: 8px;
+    -webkit-animation-name: fontcolor;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: fontcolor;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
+.cool {
+    border: 5px;
+    border-radius: 35px;
+    border-color: white;
+    text-align: center;
+    height: 30px;
+    padding: 40px;
+	font-size: 30px;
+    font-family: Impact;
+    color: black;
+    -webkit-transition: bgcolor .5s,color .5s, background .2s;
+    font-size: .5s;
+    animation: 1s ease-out 0s 1 slidesInFromTop;
+    transition: all 0.2s;
+	background-image: url("../Index/labstest2.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.cool:hover {
+	text-shadow: 1px 1px 5px #000000;
+    color: white;
+	font-size: 35px;
+	background-image: url(../Index/labstest.png)
+
+}
+
+a {
+    color: black;
+    font-size: 4em;
+    -webkit-transition: bgcolor 1s,color 2s;
+    transition: bgcolor 1s;
+    text-decoration: none;
+    transition: color ease 0.2s;
+}
+a:hover {
+    color: white;
+}
+
+span {
+    font-family: Impact;
+}

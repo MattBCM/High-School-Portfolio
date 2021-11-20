@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Matthew M's Portfolio</title>
+<link rel="icon" href="WCP_MM/Index/my_logo_beta.png">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="WCP_MM/Projects/Project_3/fullpage.css">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+<link rel="stylesheet" href="script/vidbacking/src/jquery.vidbacking.css" type="text/css">
+<link rel="stylesheet" href="script/jquery.vidbacking.min.css">
+</head>
+
+<body>
+<div id="fullpage">
+	<div class="section active" id="section1">
+		<video class="vidbacking" autoplay muted loop data-keepplaying id="myVideo">
+			<source src="videos/homeVideo.mp4">
+		</video>
+		<h1 class="anim-text-flow txt" id="homeTitle">Matthew Murillo's <br> Portfolio</h1>
+		<div class="arrow arrowMain"></div>
+
+	</div>
+	<div class="section" id="Section2">
+		<h1 id="AboutMe">About Me</h1>
+		<div class="cycle-slideshow" 
+		data-cycle-timeout="10000"
+		data-cycle-fx="scrollHorz"
+		id="CycleImage" 
+		data-tilt
+		data-tilt-scale="1.1"
+		data-tilt-max="10">
+			<div class="cycle-pager"></div>		
+			<img src="images/AboutMe1" class="image-slideshow">
+			<img src="images/AboutMe2" class="image-slideshow">
+			<img src="images/IMG-20190406-WA0000.jpg">
+		</div>
+		<div id="Section2Description"
+		data-tilt
+		data-tilt-scale="1.1"
+		data-tilt-max="7">
+			<p id="sec2Desc">I am currently a Senior at Information Technology High School attending the Web Design Academy.<br><br> Throughout my years at the Web Design academy, I strived for my passions on working with technology and found out my goal of becoming a Software Engineer or Computer Programmer.<br><br>My hobbies includes: 
+				<center>
+				<ul id="myHobbies">
+					<li>Creating/Playing Games</li>
+					<li>Hanging Out with Friends</li>
+					<li>Editing Pictures</li>
+				
+				</ul>
+				<img src="images/bigchibiman.png" width="120px">
+				</center>
+			</p>
+		</div>
+		<div id="particles-js" class="gradient"></div>
+		<div class="arrow arrowMain"></div>
+		<div class="arrow arrowUp"></div>
+	</div>
+	<div class="section" id="Section3">
+		<h1 id="MySkills">My Skills</h1>
+		<div id="chartContainer" style="width: 45%;" 
+		data-tilt
+		data-tilt-scale="1.1"
+		data-tilt-max="7"></div>
+		<div id="Section3Description"
+		data-tilt
+		data-tilt-scale="1.1"
+		data-tilt-max="7">
+			<p id="sec3Desc">Certified In:</p>
+			<div id="AdobeInfo">
+				<div class="hvrbox">
+					<img src="images/dreamweaver.png" alt="Dreamwaver Logo" class="hvrbox-layer_bottom adobeLogo" >
+					<div class="hvrbox-layer_top hvrbox-layer_slideup">
+					<div class="hvrbox-text">Adobe Dreamwaver CC</div>
+					</div>
+				</div>
+				<div class="hvrbox" >
+					<img src="images/photoshop.png" alt="Photoshop Logo" class="hvrbox-layer_bottom adobeLogo" >
+					<div class="hvrbox-layer_top hvrbox-layer_slideup">
+					<div class="hvrbox-text">Adobe Photoshop CC</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="arrow arrowMain"></div>
+		<div class="arrow arrowUp"></div>
+	</div>
+	
+	<div class="section">
+		<canvas id="background"></canvas>
+		<h1 id="LabsProjects">Labs / Projects</h1>
+		<p id="featuredText">Featured</p>
+		<div id="Sec4ImageHolder">
+		</div>
+		<div id="buttonSection">
+		<button class="fill" id="workButton" onclick="window.open('showcase');">All Labs and Projects</button>
+		<button class="fill" onclick="window.open('https://bcmblogzweb.blogspot.com');" id="bloggerButton" >Blogger Page</button>
+		</div>
+		<div class="arrow arrowUp"></div>
+	</div>
+</div>
+<script  src="jquery331min.js"></script>
+<script type="text/javascript" src="script/jquery.vidbacking.min.js"></script>
+<script type="text/javascript" src="WCP_MM/Projects/Project_3/script/fullpage.min.js"></script>
+<script type="text/javascript" src="script/jquery.vidbacking.js"></script>
+<script type="text/javascript" src="WCP_MM/Projects/Project_2/jquery.cycle2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script type="text/javascript" src="script/vanilla-tilt.js"></script>
+<script type="text/javascript" src="script/three.min.js"></script>
+<script type="text/javascript" src="script/vanta.waves.min.js"></script>
+<script type="text/javascript" src="script/apexcharts/dist/apexcharts.min.js"></script>
+<script type="text/javascript" src="script/bubble-bg-master/background.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

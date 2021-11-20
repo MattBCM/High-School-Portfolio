@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab #27</title>
+  <style>
+	  body, html{
+		  margin: 0;
+		  background-image: url(../../Projects/Project_6/background.png);
+		  background-size: cover;
+	  }
+		ul {
+    	position: fixed;
+    	list-style-type: none;
+    	margin: 0;
+   	 	padding: 0;
+    	overflow: hidden;
+    	background-color: rgba(24,24,24,0.86);
+    	position: fixed;
+    	top: 0;
+    	width: 100%;
+		z-index: 1;
+	
+}
+
+	li {
+   	 	float: left;
+}
+
+	li p {
+    	display: block;
+    	color: white;
+    	text-align: center;
+   	 	padding-left: 20px;
+    	text-decoration: none;
+		font-family: "Helvetica";
+		font-size: 32px;
+	
+}
+	#topImage {
+		border-radius: 20px;
+}
+	  #topImage:hover{
+		  cursor: pointer;
+	  }
+	  #somethin{
+	position: relative;
+	margin: auto;
+  	left: 0;
+	right: 0;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	text-align: center;
+	vertical-align: middle;
+	font-size: 50px;
+	  }
+  </style>
+</head>
+<body>
+<ul>
+  		<li id="homepageimage" ><img src="../../Index/my_logo_beta.png" width="80" style="padding: 10px 10px" id="topImage"> </li>
+  		<li><p style="letter-spacing: 10px" class="titlehomepage">Lab #27 - JavaScript References</p></li>
+	</ul>
+	<p><em id="somethin">Psst: have a look at the JavaScript Console again<span>😉</span></em></p>
+	
+  <script src="../../jquery331min.js"></script>	
+  <script>
+	  
+	//THIS JQUERY FUNCTION ALLOWS THE LOGO IMAGE TO TAKE YOU BACK TO THE MAIN INDEX	
+			
+		$("#homepageimage").click(function(){
+			var img = $("#topImage");
+			img.animate({ width: '70px', padding: '20px 20px' }, 250);
+			img.animate({ width: '80px', padding: '10px 10px' }, 250);
+			location.href = "../../../";
+			});  
+	  
+    // start with strings, numbers and booleans
+    // let age = 100;
+    // let age2 = age;
+    // console.log(age, age2);
+    // age = 200;
+    // console.log(age, age2);
+    // let name = 'Wes';
+    // let name2 = name;
+    // console.log(name, name2);
+    // name = 'wesley';
+    // console.log(name, name2);
+    // Let's say we have an array
+    const players = ['Matthew', 'Akash', 'Eduardo', 'Shafayet'];
+    // and we want to make a copy of it.
+    const team = players;
+    console.log(players, team);
+    // You might think we can just do something like this:
+    // team[3] = 'Lux';
+    // however what happens when we update that array?
+    // now here is the problem!
+    // oh no - we have edited the original array too!
+    // Why? It's because that is an array reference, not an array copy. They both point to the same array!
+    // So, how do we fix this? We take a copy instead!
+    const team2 = players.slice();
+    // one way
+    // or create a new array and concat the old one in
+    const team3 = [].concat(players);
+    // or use the new ES6 Spread
+    const team4 = [...players];
+    team4[3] = 'heeee hawww';
+    console.log(team4);
+    const team5 = Array.from(players);
+    // now when we update it, the original one isn't changed
+    // The same thing goes for objects, let's say we have a person object
+    // with Objects
+    const person = {
+      name: 'Matthew Murillo',
+      age: 18
+    };
+    // and think we make a copy:
+    // const captain = person;
+    // captain.number = 99;
+    // how do we take a copy instead?
+    const cap2 = Object.assign({}, person, { number: 99, age: 12 });
+    console.log(cap2);
+    // We will hopefully soon see the object ...spread
+    // const cap3 = {...person};
+    // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+    const wes = {
+      name: 'Matthew',
+      age: 50,
+      social: {
+        twitter: '@MatBCM01',
+      }
+    };
+    console.clear();
+    console.log(wes);
+    const dev = Object.assign({}, wes);
+    const dev2 = JSON.parse(JSON.stringify(wes));
+  </script>
+
+</body>
+</html>

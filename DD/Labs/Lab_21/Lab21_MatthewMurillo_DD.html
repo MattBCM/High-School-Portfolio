@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lab 21 Matthew Murillo</title>
+<link rel="stylesheet" href="Lab21.css">
+<link rel="icon" type="image/png" href="http://techteach.us/Web2019/Mmatthew/Labs/Lab_7/my_logo_beta.png">
+</head>
+
+<body>
+<center>
+<h1 id="center">Lab # 21</h1>
+<h2>Digital Design</h2>
+<h3>Matthew Murillo</h3>
+<h4>3-26-18</h4>
+
+<p>In this lab, you would be asked about your exercise record. First it will ask for your name and then would give you a record of the excerises you did. Then a popup would tell you whether to take a walk outside or not. If you choose yes, a popup would tell you that you walked for a random amount of miles. If you say no, then the popup would say you didnt walk</p><br>
+<button onClick="walk()" class="button">Start</button>
+	</center>
+<script>
+	function walk() {
+		var x = prompt("Enter Your Name");
+		var y = 
+		alert(x + " did "  + Math.floor((Math.random() * 50) + 1) + " of push ups and " + Math.floor((Math.random() * 50) + 1) + " amount of sit ups.")
+		var c = confirm("Do you want to walk?")
+		if (c) {
+			alert(x + " walked " + Math.floor((Math.random() * 50) + 1)+ " miles!")}
+		else {
+			alert(x + " didnt walk")
+		}
+		
+	}
+</script>
+</body>
+</html>

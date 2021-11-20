@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lab 20 Matthew Murillo</title>
+<link rel="stylesheet" href="Lab20.css">
+<link rel="icon" type="image/png" href="http://techteach.us/Web2019/Mmatthew/Labs/Lab_7/my_logo_beta.png">
+</head>
+
+<body>
+<center>
+<h1 id="center">Lab #20</h1>
+<h2>Digital Design</h2>
+<h3>Matthew Murillo</h3>
+<h4>3-21-18</h4>
+
+<p>In this lab, its going to be a guessing game. There is a number that you, the player, have to guess. There will be a limit to how far you can guess. In this game, the number would be from 1 to 50. If the number you guess is lower than the answer, then the game would state a message saying to guess higher. If the number is higher than the answer, the game would say to guess lower. Guess the correct number and you win. Good luck and have fun!</p><br>
+Number is between 1 and 50<br>
+<form name="guess">
+<input type="text" id="textbox" name="guessnumber"> <input type="button" class="button" name="guessbutton" value="Enter" onClick="myFunction()">
+</form><br>
+<div id="textarea"><p id="result">Guess A Number</p></div>
+<input type="button" class="button" name="guessbutton" value="Reset Number" onClick="reset()">
+	</center>
+
+<script>
+var y = document.getElementById("textbox").value;
+var x = Math.floor((Math.random() * 50) + 1);
+function myFunction() {
+	
+if (x == document.getElementById("textbox").value) {
+	document.getElementById("result").innerHTML = "You Got It Right! The Hidden Number Was: " + x + "!";
+	document.getElementById("victory").play();
+}
+else if (x < document.getElementById("textbox").value){
+	document.getElementById("result").innerHTML = "Guess a Lower Number";
+	document.getElementById("oof").play();
+}
+else {
+	document.getElementById("result").innerHTML = "Guess a Higher Number";
+	document.getElementById("oof").play();
+}
+}
+function reset() {
+x = Math.floor((Math.random() * 50) + 1);
+document.getElementById("result").innerHTML = "Reseted!";
+}
+</script>
+<audio id="victory" src="../Lab_17/victory.mp3" preload="auto"></audio>
+<audio id="oof" src="../Lab_16/OOF.mp3" preload="auto"></audio>
+</body>
+</html>

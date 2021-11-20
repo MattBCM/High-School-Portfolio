@@ -1,0 +1,228 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  background-image: url( background.png);
+	background-size: cover;
+	background-attachment: fixed;
+  margin: 0;
+  margin-top: 100px
+}
+
+ul {
+    	position: fixed;
+    	list-style-type: none;
+    	margin: 0;
+   	 	padding: 0;
+    	overflow: hidden;
+    	background-color: rgba(24,24,24,0.86);
+    	position: fixed;
+    	top: 0;
+    	width: 100%;
+		z-index: 1;
+	
+}
+
+	li {
+   	 	float: left;
+}
+
+	li p {
+    	display: block;
+    	color: white;
+    	text-align: center;
+   	 	padding-left: 20px;
+    	text-decoration: none;
+		font-family: "Helvetica";
+		font-size: 32px;
+	
+}
+	#topImage {
+		border-radius: 20px;
+}
+#title{
+  text-align: center;
+  padding: 0.5em;
+  margin: 0.5em;
+  color: #ffffff;
+}
+
+#survey-container{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  
+  width: 60%;
+  margin: 1em auto;
+  padding: 2em;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+#survey-form{
+  padding-top: 1em;
+  
+  width: 70%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+#description{
+  text-align: center;
+  padding: 0.5em;
+  margin: 1em;
+}
+
+input, select {
+  font-size: 1em;
+  padding: 2px 5px 4px;
+  border-radius: 2px;
+}
+
+input, select {
+/*   outline: none; */
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+
+textarea{
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+
+input[type=text]:focus, input[type=number]:focus, input[type=email]:focus{
+   border-color: rgba(82, 168, 236, 0.8);
+   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+}
+
+textarea:focus {
+   border-color: rgba(82, 168, 236, 0.8);
+   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+  margin: 5px 1px 3px 0px;
+}
+
+.form-row{
+  margin: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  order: 1;
+  width: 50%;
+  text-align: right;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  user-select: none;
+  cursor: pointer;
+}
+
+input, select {
+  order: 2;
+  flex: 1 1 40%;
+}
+input, label{
+	width: 50%;
+}
+#rating, #services, #services1{
+  order: 2;
+  flex: 1 1 auto;
+  
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.rating-row > input[type="radio"], .services-row > input[type="checkbox"]{
+  order: 1;
+  flex: none;
+  width: auto;
+  margin-left: 0.5em;
+}
+
+.rating-row > label, .services-row > label{
+  order: 2;
+  text-align: left;
+  margin-left: 0.5em;
+}
+
+.form-row button {
+  margin: auto;
+  padding: 8px 16px;
+  border: none;
+  background: #0F3F6F;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 10px;
+  width: 100%;
+  transition: all 0.2s ease-in;
+}
+.submitButton{
+  position: relative;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center; 
+}
+#submit1{
+  background: #0F3F6F;
+  color: #f2f2f2;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 10px;
+  width: 50%;
+  position: relative;
+  margin: auto;
+  left: 0;
+  right: 0;
+  transition: all 0.2s ease-in;
+}
+#submit1:hover{
+	background-color: rgba(39,90,170,1.00);
+	letter-spacing: .35em;
+}
+#result{
+	position: relative;
+	margin: auto;
+  	left: 0;
+	right: 0;
+	font-size: 25px;
+	text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  label{
+    width:30%;
+  }
+  input{
+    width:30%;
+  }
+/*   .simple-label {
+    text-align: center;
+  } */
+  .long-label{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.5em;
+  }
+  #survey-container{
+    width:90%;
+  }
+  .form-row{
+    margin:0.5em;
+    padding:0;
+  }
+	
+
+}

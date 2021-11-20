@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>G4C Endangered Species</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #2f2f2f;
+		}
+		.text {
+			margin: 10px 0;
+			height: 200px;
+			text-align: center;
+			overflow: hidden;
+			font-family: sans-serif;
+		}
+		h1 {
+			color: #ff0064;
+			font-size: 70px;
+			line-height: 70px;
+
+			margin: 10px 0;
+		}
+		h2 {
+			color: #fff;
+			font-size: 50px;
+			line-height: 50px;
+
+			margin: 10px 0;
+		}
+		canvas {
+			display: block;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="text">
+		<h1>Endangered Species: Snake Game</h1>
+		<h2>Score: <span id="score">0</span></h2>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+	<script>
+
+		"use strict";
+
+		var s;				// Snake object
+		var f;				// Food object
+
+		var game_over = false;
+		var score = document.getElementById('score');
+
+		var orientation = window.innerWidth < window.innerHeight ? 'landscape' : 'portrait';
+		var size = orientation == 'landscape' ? window.innerHeight * .5 : window.innerWidth * .5;
+			size = size - 200;
+
+		var c_width;
+		var c_height;
+
+		function setup() {
+			s = new Snake();
+			f = new Food();
+
+			size = size - (size % s.size);
+			c_width = c_height = size;
+			createCanvas(c_width, c_height);
+			frameRate(10)
+
+			f.createPosition();
+			f.show();
+		}
+
+		function draw() {
+			if (!document.hasFocus() || game_over) {
+				return;
+			}
+			background(51);
+
+			f.update();
+			s.update();
+			s.show();
+
+			// Check if is inside canvas
+			if (!s.insideCanvas(s.x, 0, c_width)) {
+				s.x = s.x < 0 ? c_width : 0;
+				game_over = !s.passthrough_allowed;
+			}
+			else if (!s.insideCanvas(s.y, 0, c_height)) {
+				s.y = s.y < 0 ? c_height : 0;
+				game_over = !s.passthrough_allowed;
+			}
+
+			// Check if the food is eaten
+			if (f.isEaten()) {
+				s.growTail();
+			}
+
+			// Check if is colliding
+			if (s.isColliding() && !s.collide_allowed) {
+				game_over = true;
+			}
+
+			if (game_over) {
+				alert("Game over\nThe score is: " + score.innerText);
+				window.location.reload()
+			}
+		}
+
+		function keyPressed() {
+			if (keyCode == UP_ARROW && s.speedy == 0) {
+				s.dir(0, s.speed * -1);
+			}
+			else if (keyCode == DOWN_ARROW && s.speedy == 0) {
+				s.dir(0, s.speed);
+			}
+			else if (keyCode == LEFT_ARROW && s.speedx == 0) {
+				s.dir(s.speed * -1, 0);
+			}
+			else if (keyCode == RIGHT_ARROW && s.speedx == 0) {
+				s.dir(s.speed, 0);
+			}
+		}
+
+		function between(num, min, max) {
+			return num >= min && num <= max;
+		}
+
+		function Snake() {
+			this.size 	= 20;
+			this.speed 	= this.size;
+
+			this.x 		= 0;
+			this.y 		= 0;
+
+			this.speedx = this.speed;
+			this.speedy = 0;
+
+			this.tail 	= [];
+			this.total 	= 0;
+			this.collide_allowed = false;
+			this.passthrough_allowed = true;
+
+			this.update = function() {
+				// If the snake has a tail, set the new position for it
+				if (this.total === this.tail.length) {
+					for (var i = 0; i < this.tail.length - 1; i++) {
+						this.tail[i] = this.tail[i+1];
+					}
+				}
+				this.tail[this.total-1] = createVector(this.x, this.y);
+
+
+				// Update the snakes position
+				this.x = this.x + this.speedx;
+				this.y = this.y + this.speedy;
+			}
+
+			// Draw the snakes new position
+			this.show = function() {
+				fill(255);
+				for (var i = 0; i < this.tail.length; i++) {
+					rect(this.tail[i].x, this.tail[i].y, this.size, this.size);
+				}
+				rect(this.x, this.y, this.size, this.size);
+			}
+
+			// Set the direction of the snake
+			this.dir = function(x, y) {
+				this.speedx = x;
+				this.speedy = y;
+			}
+
+			this.growTail = function() {
+				this.total++;
+				score.innerText = this.total;
+			}
+
+			this.insideCanvas = function(num, min, max) {
+				return num > min && num < max;
+			}
+
+			this.isColliding = function() {
+				for (var i = 0; i < this.tail.length; i++) {
+					if ( dist(this.x, this.y, this.tail[i].x, this.tail[i].y) < 1 ) {
+						return true;
+					}
+				}
+			}
+		}
+
+		function Food() {
+			this.positions = {
+				x: [],
+				y: []
+			};
+			this.x = 0;
+			this.y = 0;
+			this.size = s.size;
+
+
+			// Define the possible positions for our food
+			this.createPosition = function() {
+				var max_x = floor(c_width / this.size);
+				var max_y = floor(c_height / this.size);
+
+				for (var x = 2; x < max_x; x++) {
+					this.positions.x.push(x * this.size);
+				}
+				for (var y = 2; y < max_y; y++) {
+					this.positions.y.push(y * this.size);
+				}
+			}
+
+			this.show = function() {
+				var key_x = floor(random(this.positions.x.length));
+				this.x = this.positions.x[key_x];
+
+				var key_y = floor(random(this.positions.y.length));
+				this.y = this.positions.y[key_y];
+			}
+
+			this.update = function() {
+				fill(255, 0, 100);
+				rect(this.x, this.y, this.size, this.size);
+			}
+
+			// Check if the snake has eaten the food
+			this.isEaten = function() {
+				if ( dist(this.x, this.y, s.x, s.y) < 1) {
+					this.show();
+					this.update();
+					return true;
+				}
+			}
+
+		}
+
+	</script>
+</body>
+</html>

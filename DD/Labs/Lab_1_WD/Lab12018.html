@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab #1 WD</title>
+</head>
+
+<body>
+<center>
+<h1>Lab #1</h1>
+<h2>Matthew Murillo</h2>
+<h2>9-12-18</h2>
+
+<p>Enter Name Here</p>
+	<input id="namePls" type="text">
+<p>Enter Age Here</p>
+	<input id="AgePls" type="text">
+<p>Enter Favorite Color</p>
+	<input id="colorPls" type="text"><br><br>
+	<input id="enterButton" type="button" value="Enter" onClick="buttonClicked();">
+	
+<p id="chanText">This text will change once you click on me</p>
+	</center>
+</body>
+</html>
+<script>
+	
+function buttonClicked() {
+	var x = document.getElementById("namePls").value;
+	var y = document.getElementById("AgePls").value;
+	var z = document.getElementById("colorPls").value;
+	
+	document.getElementById("chanText").innerHTML=x+" is going to get a "+z+" banana at the age of "+y;
+	
+	
+}
+
+
+</script>

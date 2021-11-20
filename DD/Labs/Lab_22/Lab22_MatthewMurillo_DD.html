@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lab 22 Matthew Murillo</title>
+<link rel="stylesheet" href="Lab22.css">
+<link rel="icon" type="image/png" href="http://techteach.us/Web2019/Mmatthew/Labs/Lab_7/my_logo_beta.png">
+</head>
+
+<body>
+<center>
+<h1>Lab # 22</h1>
+<h2>Digital Design</h2>
+<h3>Matthew Murillo</h3>
+<h4>3-27-18</h4>
+
+<div>
+	<form name="formz"><br>
+	Enter Your First Name: <input type="text" name="FName" class="textbox"><br><br>
+	Enter Your Last Name: <input type="text" name="LName" class="textbox"><br><br>
+	Enter Your Email: <input type="text" name="EmailPls" class="textbox"><br><br>
+	Enter Your Address: <input type="text" name="Adress" class="textbox"><br><br>
+	Enter Your Zip Code: <input type="text" name="Zip" class="textbox"><br><br>
+	Enter Your Phone Number: <input type="text" name="Phon" class="textbox"><br><br>
+	Enter Your Credit Card Number: <input type="text" name="Credit" class="textbox"><br><br>
+</form>
+</div>
+<input type="button" name="buttonvalid" value="Enter" onClick="Validation();" id="button">
+	</center>
+<script>
+	
+	function Validation(){
+		validFName();
+		validLName();
+		validEmail();
+		validAdress();
+		validZip();
+		validPhon();
+		validCreditCard();
+	}
+	function validFName() {
+    if (document.forms["formz"]["FName"].value == "") {
+        alert("First Name must be filled out");
+        return false;
+	}	
+}
+
+		function validLName() {
+    if (document.forms["formz"]["LName"].value == "") {
+        alert("Last Name must be filled out");
+        return false;
+	}	
+}
+		function validEmail() {
+    if (document.forms["formz"]["EmailPls"].value == "") {
+        alert("Email must be filled out");
+        return false;
+	}	
+}
+		function validAdress() {
+    if (document.forms["formz"]["Adress"].value == "") {
+        alert("Address must be filled out");
+        return false;
+	}	
+}			
+		function validZip() {
+    if (document.forms["formz"]["Zip"].value == "") {
+        alert("Zip Code must be filled out");
+        return false;}
+	else if ((document.forms["formz"]["Zip"].value < 00501) || (document.forms["formz"]["Zip"].value > 99950) ) {
+		alert("Invalid Zip Code");
+		return false;
+	
+	}
+}
+		function validPhon() {
+		m = document.forms["formz"]["Phon"].value
+		n = m.length;
+
+    if (document.forms["formz"]["Phon"].value == "") {
+        alert("Phone Number must be filled out");
+		return false;
+	}
+	if (n <= 9 || n >=11 ) {
+		alert("Invalid Phone Number");
+		return false;
+	}
+		}
+		function validCreditCard() {
+		var c = document.forms["formz"]["Credit"].value	
+		
+	if (c.length != 16 || c % 2 != 0) {
+		alert("Invalid Credit Card Number")
+	}
+	else if (isNAN(c)) {
+		alert("Invalid Credit Card Number")
+	}
+	else if (c == "") {
+		alert("Credit Card Number must be filled out")
+	}
+		}
+</script>
+</body>
+</html>

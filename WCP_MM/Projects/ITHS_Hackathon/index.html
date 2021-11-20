@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Technology For Good</title>
+<script src="../../jquery331min.js"></script>
+<script src="../Project_2/parallax.js-1.5.0/parallax.min.js"></script>
+<script src="../Peoject_2/parallax.js-1.5.0/parallax.js"></script>
+<style>
+body{
+	margin:0;
+
+}
+html{
+	width: 100%;
+}
+
+#TopNavi {
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	height: 80px;
+    background-color: rgba(255,255,255,0.60);
+	left: 0;
+    top: 0;
+    width: 100%;
+	z-index: 2;
+	animation: 1s ease-out 0s 1 slidesInFromTop;
+
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding-left: 20px;
+    text-decoration: none;
+	font-family: "Helvetica";
+	top:25px;
+	font-size: 30px;
+	position: relative;
+
+}
+#homeNavButton {
+	padding: 0 5px 0 14px;
+  transition: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+#homeNavButton:hover{
+  	color: #32a4cb;
+}
+#navImage img {
+	width: 100px;
+}
+
+#missionNavButton{
+	transition: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in;
+}
+#missionNavButton:hover{
+	color: #32a4cb;
+}
+#buyNavButton{
+	transition: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in;
+}
+#buyNavButton:hover{
+	color: #32a4cb;
+}
+
+.hoverEffect > a {
+  color: #000;
+  text-decoration: none;
+}
+
+.hoverEffect > a:hover {
+  color: #000;
+}
+.hoverEffect > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.hoverEffect > a:hover:before {
+	background-color: #32a4cb;
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+	.parallax {
+    /* Set a specific height */
+    min-height: 600px;
+}
+.tableTitle {
+	font-family: helvetica;
+	font-size: 40px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="container">
+  <ul id="TopNavi">
+  	<li id="navImage"><img src="whitehouse.png"></li>
+  	<li class="hoverEffect"><a style="letter-spacing: 3px" id="edu">Education</a></li>
+  	<li><a style="letter-spacing: 10px">|</a></li>
+  	<li class="hoverEffect"><a style="letter-spacing: 3px" id="pov">Poverty</a></li>
+  	<li><a style="letter-spacing: 10px">|</a></li>
+  	<li class="hoverEffect"><a style="letter-spacing: 3px" id="opp">Impacts</a></li>
+  </ul>
+  	</div>
+<!-- Information -->
+<div class="parallax" data-parallax="scroll" data-image-src="somethin.jpg"></div>
+	<center>
+		<div id="education">
+		<p class="tableTitle">Education</p>
+	<table>
+		<th>
+		<div class="imgContainer">
+		  <img src="https://amp.businessinsider.com/images/589294ea3149a1b6008b47d5-750-500.jpg" alt="" class="image" width="50%">
+		</div></th>
+		<th> <div class="Education">
+			<p>  Invest in Video Games: Kids enjoy playing videos games and if the video games are good, they will keep on playing them. <br>
+				Including video games in education is a powerful tool to learn more. Kids tend to remember stuff that happens in video games <br>
+				more than things that take place in a classroom and the main reason for that is the interaction people have in video games and <br>
+				how engaged they feel while playing.</p>
+
+				<p>I’ve met people that can tell me almost everything they saw in a video game they started playing hours ago but they can’t tell me <br>
+					what did they learn in their class today. This is a perfect example to prove that video games helps people learn more. I’m not saying <br>
+					that classrooms should be replaced by videos, my point is that video games should be included in education to make people learn in a <br>
+					different way that might benefit more students.
+				</p>
+		 	<p> <a href= "https://www.forbes.com/sites/jordanshapiro/2015/03/30/how-video-games-in-the-classroom-will-make-students-smarter/#3b1e15f76d12">https://www.forbes.com/sites/jordanshapiro/2015/03/30/how-video-games-in-the-classroom-will-make-students-smarter/#3b1e15f76d12</a>
+				<a href= "https://www.idunn.no/dk/2006/03/are_video_games_good_for_learning">https://www.idunn.no/dk/2006/03/are_video_games_good_for_learning</a>
+		<p>·      More educational websites: Websites have been around since the beginning of when computers were popularized. More often than not now,<br>
+			 websites have been used for information and education. Educational websites like Khan Academy and Udacity can benefit students and scholars <br>
+			 like never before. These websites can improve people’s learning abilities, socializing skills, motivation, management skills, and technology <br>
+			 skills. Also, it can be more fun to learn in educational websites than in a classroom filled with lecture.</p></th></table><br><br></div>
+<div id="Poverty">
+		<p class="tableTitle">Poverty</p>
+		<table>
+		<th>
+		<div class="imgContainer">
+		  <img src="https://media.wnyc.org/i/800/0/l/85/1/AP_585496653134.jpg" alt="" class="image" width="50%">
+		</div></th>
+	<th>
+		<h2>#1</h2>
+		<p> Clean water for low income families and poor people: An enormous amount of people doesn’t have access to clean or enough water. <br>
+			They get diseases and sicknesses that hinder the growth of their well being. Although technology can help people get clean water.<br>
+			Border Project states “Such advances are not out of reach and modern technology can create achievable goals for water and sanitation.<br>
+			 Practical Action, for example, partnered with Kenyans from the dry, arid Turkana region to develop a solution to the area’s drought problems.”
+	<br><br>
+			 “We developed
+			 a solar-powered water pump that uses locally-sourced equipment to pump 30,000<br>
+			 clean liters of clean and safe water to the village every day” the organization<br>
+			 reported. “So with technology at our side, we could bring clean and fresh water<br>
+			 to those in need. Soon enough we might be able to end this water crisis in the<br>
+			 world with technology”. </p>
+	<br>
+	<h2>#2</h2>
+			<p>transportation: Technology can improve rural areas by improving travel and transportation so that they can get to places faster <br>
+				and more efficient. For example, if people in rural areas usually tend to walk or bike to places and they want to travel faster, <br>
+				then technology can help them. Technology like buses, cars, or trains can improve their quality of life and help them cut down on time.<br>
+				 Proof of this comes from cities where transportation is a huge thing in society. According to <br>
+				 https://www.apta.com/mediacenter/ptbenefits/Pages/FactSheet.aspx <br>
+				 it talks about how transportation connects people and improves economy. With technology for transportation, people are traveling and
+				 connecting faster than ever before.
+			</p>
+	 	<p> <a href= "https://borgenproject.org/10-technological-solutions-poverty/">Link1</a>
+		<a href= "https://www.apta.com/mediacenter/ptbenefits/Pages/FactSheet.aspx">Link2</a>
+	<p></th></table><br><br></div>
+<div id="opportunities">
+	<p class="tableTitle">Impacts</p>
+	<table>
+		<th>
+		<div class="imgContainer">
+		  <img src="https://nz.usembassy.gov/wp-content/uploads/sites/13/2015/07/edusa-advising.jpg" alt="" class="image" width="50%">
+			</div></th>
+		<th><p>AI and Automation: Some people think that technology makes our world worse than before and because of technology, many jobs have been<br>
+			 taken away from the people since computers can do it more efficiently. In reality, technology is helping us avoid to do jobs that aren’t <br>
+			 safe or are too difficult for people. In the world, there are many experts that are creating new technology every day to help people with <br>
+			 mental disabilities and inabilities. Believe it or not, AI and Automation is already happening nowadays. An example is when someone wakes up <br>
+			 in the morning and puts the coffee machine to work so the machine can process the coffee instead of doing it yourself which probably would take <br>
+			 more time. This proves that AI and Automation makes our lives more efficient.</p></th>
+	</table></div>
+		</center>
+
+<script>
+
+$(function(){
+	$("#edu").on("click", function(){
+  document.querySelector('#education').scrollIntoView({
+  behavior: 'smooth'});
+});
+$("#pov").on("click", function(){
+  document.querySelector('#Poverty').scrollIntoView({
+  behavior: 'smooth'});
+});
+$("#opp").on("click", function(){
+  document.querySelector('#opportunities').scrollIntoView({
+    behavior: 'smooth'
+  });
+});
+});
+
+</script>
+</center>
+</body>
+</html>

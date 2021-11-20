@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="callbacks.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="controls-filter.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="controls-live.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="controls-sort.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="controls-multimix.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="controls-toggle.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="factory.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="extension.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="h.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="main.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="mixer-change-layout.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="mixer-dataset.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="mixer-get-state.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="mixer-filter.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="mixer-get-config.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="mixer-remove.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="mixer-insert.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="mixer-multimix.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="mixer-sort.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="mixer-toggle-on-off.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+<file name="queue.js" server="ftp.techteach.us/WCP_MM/" local="131828945820000000" remote="131855109000000000" Dst="2" />
+</dwsync>

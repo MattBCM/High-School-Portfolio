@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lab 19 Matthew Murillo</title>
+<link rel="stylesheet" href="../Lab_19/Lab19.css">
+<link rel="icon" type="image/png" href="http://techteach.us/Web2019/Mmatthew/Labs/Lab_7/my_logo_beta.png">
+</head>
+
+<body>
+<center>
+<h1 id="center">Lab #19</h1>
+<h2>Digital Design</h2>
+<h3>Matthew Murillo</h3>
+<h4>3-18-18</h4>
+<div>
+	<p id="initial">Initial Number is: 25</p>
+<form name="number">
+Enter The Second Number: <input type="text" class="textbox" id="two" name="2"><br>	
+</form><br>
+
+<form name="results">
+ReAssign Addition, Click Here: <input type="button" class="button" name="addition" value="Enter" onClick="audio(); plus();"><br>
+ReAssign Subtraction, Click Here: <input type="button" class="button" name="subtraction" value="Enter" onClick="audio(); minus();"><br>
+ReAssign Multiply, Click Here: <input type="button" class="button" name="multiply" value="Enter" onClick="audio(); multi();"><br>
+ReAssign Divide, Click Here: <input type="button" class="button" name="divide" value="Enter" onClick="audio(); divi();"><br>
+Reassign Modulo, Click Here: <input type="button" class="button" name="modulo" value="Enter" onClick="audio(); modu();"><br>
+Initial = Second Number, Click Here: <input type="button" class="button" name="equ" value="Enter" onClick="audio(); equalby();">
+	
+</form>	
+	
+<p id="output">your number is...</p>	
+</div>
+<script>
+var x = 25;
+function plus()	{
+var y = document.getElementById("two").value;
+x = +x + +y
+document.getElementById("initial").innerHTML='Initial Number is: ' + x;
+document.getElementById("output").innerHTML= x+'!' ;
+}
+function minus() {
+var y = document.getElementById("two").value;
+x -= y;
+document.getElementById("initial").innerHTML='Initial Number is: ' + x;
+document.getElementById("output").innerHTML= x+'!';
+}
+function multi() {
+var y = document.getElementById("two").value;
+x *= y;
+document.getElementById("initial").innerHTML='Initial Number is: ' + x;
+document.getElementById("output").innerHTML= x+'!';
+}
+function divi() {
+var y = document.getElementById("two").value;
+x /= y;
+document.getElementById("initial").innerHTML='Initial Number is: ' + x;
+document.getElementById("output").innerHTML= x+'!';	
+}
+function modu() {
+var y = document.getElementById("two").value;
+x %= y;
+document.getElementById("initial").innerHTML='Initial Number is: ' + x;
+document.getElementById("output").innerHTML= x+'!';	
+}
+function equalby() {
+var y = document.getElementById("two").value;
+x = document.getElementById("two").value;
+document.getElementById("output").innerHTML= x+'!';	
+document.getElementById("initial").innerHTML='Initial Number is: ' + x;
+}
+function audio() {
+document.getElementById("victory").play();
+}
+</script>
+<audio id="victory" src="../Lab_17/victory.mp3" preload="auto"></audio>
+<p id="demo"> In this lab, it was all about using a shortcut to add, subtract and more function. For example, if I want to multiply the value of x and y and then make the result equal to x, you would do x *= y. This makes the code shorter and easier to understand or you can say its a way of using abstraction. I first got a copy of Lab #18 and just changed the function. I also had to make the x value a global variable or else the code wont function correctly. This took time to figure out, but I managed to figure it out.  </p>
+	</center>
+</body>
+</html>

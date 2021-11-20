@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+<body>
+	<p id="demo"></p>
+<script>
+	document.write('Hello World');
+	document.write("<h1>Hello World</h1>");
+	document.getElementById("demo").innerHTML="Hello";
+	console.log("Arigato");
+	alert("Shalom");
+	var greeting = prompt("Greet In A Different Language", "");
+	var name = prompt("Tell Me Your Name Nerd!", "");
+	alert(greeting +" "+ name);
+	var c = confirm("Do you want to know that in Spanish?");
+	if(c){
+		alert("Hola Hombre");
+	}
+	else {
+		document.getElementById("demo").innerHTML="Ciao Planeta"
+	}
+</script>
+<p>In this lab, you would be greeted with 3 prompts in the beginning, all that are different. One of them is a regular alert, the other is a prompt where you have to respond. your answer would be shown in another alert. Finally there is a confirm alert where you would answer yes or no to the question.Answering no would change the "Hello" text to "Ciao Planeta" The 3 texts on top are actually created in JavaScript, not in HTML. There is also one hidden message, but only can be read using the console log. Using all of these ways to display text, I enhanced my skill for JavaScript.</p>
+<center>
+	<img src="WCP_MM/Labs/Lab_1/picofme.PNG" width="300"> 
+</center>
+</body>
+</html>

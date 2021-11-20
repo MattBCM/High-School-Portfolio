@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet"/>
+		<link rel="icon" href="../images/logo.png">
+		<script src="jquery.cycle2.min.js"></script>
+		<script src="jquery.cycle2.tile.min.js"></script>
+		<script src="jquery.cycle2.caption2.min.js"></script>
+
+        <title>Life-Style Shop</title>
+    </head>
+	<div class="container2">
+<ul id="TopNavi">
+	<li id="navImage"><img src="../images/logo.png"></li>
+	<li class="hoverEffect"><a style="letter-spacing: 3px" id="homeNavButton" href="../">Home</a></li>
+	<li><a style="letter-spacing: 10px">|</a></li>
+	<li class="hoverEffect"><a style="letter-spacing: 3px" id="missionNavButton" href="../Mission_Statement/">Mission Statement</a></li>
+	<li><a style="letter-spacing: 10px">|</a></li>
+	<li class="hoverEffect"><a style="letter-spacing: 3px" id="buyNavButton">Buy Now!</a></li>
+</ul>
+	</div>
+	
+    <body style="position: absolute; top: 110px; width: 100%">
+        <div class="controls">
+            <button type="button" class="control" data-filter="all">All</button>
+            <button type="button" class="control" data-filter=".green" style="width: 70px; align-content: center">Shirts</button>
+            <button type="button" class="control" data-filter=".blue" style="width: 170px">Merchandises</button>
+        </div>
+
+        <div class="container">
+			<div class="mix green" style="width: 375px"><img src="../images/clothing/1_price.png" style="width: 375px" class="image" onMouseOver="hoverEffect()"></div>
+            <div class="mix green" style="width: 375px"><img src="../images/clothing/2_price.png" style="width: 375px" class="image"></div>
+            <div class="mix blue" style="width: 375px"><img src="../images/clothing/4_price.png" style="width: 375px" class="image"></div>
+            <div class="mix green" style="width: 375px"><img src="../images/clothing/3_price.png" style="width: 375px" class="image"></div>
+		  	<div class="mix blue" style="width: 375px"><img src="../images/clothing/10_price.png" style="width: 375px" class="image"></div>
+            <div class="mix blue" style="width: 375px"><img src="../images/clothing/12_price.png" style="width: 375px" class="image"></div>
+            <div class="mix green" style="width: 375px"><img src="../images/clothing/5_price.png" style="width: 375px" class="image"></div>
+            <div class="mix green" style="width: 375px"><img src="../images/clothing/6_price.png" style="width: 375px" class="image"></div>
+            <div class="mix green" style="width: 375px"><img src="../images/clothing/7_price.png" style="width: 375px" class="image"></div>
+            <div class="mix green" style="width: 375px"><img src="../images/clothing/8_price.png" style="width: 375px" class="image"></div>
+            <div class="mix green" style="width: 375px"><img src="../images/clothing/9_price.png" style="width: 375px" class="image"></div>
+            <div class="mix green" style="width: 375px"><img src="../images/clothing/11_price.png" style="width: 375px" class="image"></div>
+
+            <div class="gap"></div>
+            <div class="gap"></div>
+            <div class="gap"></div>
+        </div>
+		<div id="footer">Made by Scions Inc. All Rights Reserved</div>
+	
+
+        <script src="../patrickkunka-mixitup-61dac05/dist/mixitup.min.js"></script>
+
+        <script>
+            var containerEl = document.querySelector('.container');
+            var mixer = mixitup(containerEl);
+			
+			function hoverEffect(){
+				document.getElementsByClassName("image").attr="../images/clothings/1.png";
+			}
+        </script>
+    </body>
+</html>

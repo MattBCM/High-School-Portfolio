@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Scions</title>
+<link rel="stylesheet" href="project2.css"></link>
+<link rel="icon" type="image/png" href="http://techteach.us/Web2019/Mmatthew/Labs/Lab_7/my_logo_beta.png"></link>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="../../jquery331min.js"></script>
+<script src="../Project_2/parallax.js-1.5.0/parallax.min.js"></script>
+<script src="../Project_2/parallax.js-1.5.0/parallax.js"></script>
+</head>
+<!-- TOP NAVIGATION BAR/TITLE -->
+<body>
+	<ul>
+  		<li id="homepageimage"><img src="1.png" width="135" style="padding: 10px 10px"id="topImage"></li>
+		<li><a href="http://techteach.us/Web2019/Mmatthew/WCP_MM/Projects/Project_2/" target="_blank">Life-Style</a></li>
+		<li><a href="https://bigcheekman.github.io/SharkTank_2/" target="_blank">MajinBuu</a></li>
+		<li style="	cursor: pointer;"><a id="bioNav">Bio</a></li>
+	</ul>
+<!-- Information on the bottom -->
+<div id="Info">
+		<center>
+			<div class="parallax" data-parallax="scroll" data-image-src="1.png" width="100%" style="z-index: 2"></div>
+			<table width="90%">
+				<th><a href="http://techteach.us/Web2019/Mmatthew/WCP_MM/Projects/Project_2/" target="_blank"><img src="sharktank1.png" width="100%" style="border-radius: 20px"></a></th>
+				<th width="50%"><p width="50%">We created a website for an online clothing brand named LifeStyle. We made 3 webpages within it, a home page, a buy now, and a mission statement page. On the homepage, we quickly introduced the company, created a banner for their company in Photoshop, and placed it on a parallax. On the buy now page, we created some clothing on Photoshop and put them on the webpage. On the mission statement page, we took photos of each member of the group and wrote a short blurb about each of them. <br><br>
+
+    Our first client was not very picky, they just requested that the color brown was non existent on the page and that they had a parallax. They said to have fun for everything else.<br><br>
+
+    The main challenge we encountered was making sure all of the animations were properly functioning.</p>
+				</th>
+			</table><br>
+			<table width="90%">
+				<th><a href="https://bigcheekman.github.io/SharkTank_2/" target="_blank"><img src="sharktank2.png" width="100%" style="border-radius: 20px"></a></th>
+				<th width="50%"><p width="50%">    We created a website for a company named Majin Buu Industries. They wanted a website made for their full body haptic suit. We decided just to make it one giant page with all of the necessary content on it. From there, we created the images and logo on Photoshop and placed them on the page. We took inspiration from Oculus VR’s page as it is somewhat similar. After that, we wrote the content necessary on how the suit is made and how it works. <br><br>
+
+    Our second client only requested that we have some animations on the page, maintain a relatively dark color scheme,  and that we write how it works.<br><br>
+
+    The main challenge we encountered was making sure the animations were working well and merging the files together on glide.site</p>
+				</th>
+			</table><br>
+			<h1>Bio</h1>
+			<div id="bio">
+			<p>We are the Scions. We develop kick ass products that combine state of the art technology and our first product is hitting the market soon.The scanner that we have created can easily scan and detect nutritional values of foods in seconds and give exact values.</p></div>
+		</center>
+</div>
+<script>
+	//THIS JQUERY FUNCTION ALLOWS THE LOGO IMAGE TO TAKE YOU BACK TO THE MAIN INDEX
+	$(document).ready(function(){
+		$("#homepageimage").click(function(){
+			var img = $("#topImage");
+			img.animate({ width: '115px', padding: '20px 20px' }, 250);
+			img.animate({ width: '135px', padding: '10px 10px' }, 250);
+			});
+		$("#bioNav").on("click", function(){
+  document.querySelector('#bio').scrollIntoView({
+    behavior: 'smooth'
+  });
+  });
+	});
+</script>
+
+</body>
+</html>

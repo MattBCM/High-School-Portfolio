@@ -1,0 +1,508 @@
+/* CSS Document */
+
+/* MAIN BODY STYLE */
+body, html{
+	margin: 0;
+	padding: 0;	
+}
+.section{
+	height: 100vh
+		}
+.image-slideshow{
+	width: 400px;
+	box-shadow: 0px 5px 15px #212121;
+	margin-left: 10px
+}
+
+#homeTitle{
+	margin: auto;
+  	left: 0;
+	right: 40%;
+	position: absolute;
+	transform: translate(0, -50%);
+	text-align: center;
+	vertical-align: middle;
+	font-size: 65px;
+	font-family: "Fira Sans";
+	letter-spacing: 3px;
+	text-shadow: 0 1px 0 #888, 0 2px 0 #777, 0 3px 0 #666, 0 4px 0 #444, 0 5px 0 #111, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+	animation: textShadow 1.6s infinite;
+}
+#myVideo{
+	width: 100vh;
+}
+#CycleImage{
+	margin: auto;
+	left: 10vw;
+	top: 25vh;
+	position: absolute;
+	text-align: center;
+	vertical-align: middle;
+	padding-bottom: 15px;
+}
+#Section2Description{
+	width: 650px;
+	height: 450px;
+	padding: 25px;
+	margin: auto;
+	background-color: #D6F2FF;
+	left: 43vw;
+	top: 25vh;
+	position: absolute;
+	text-align: center;
+	vertical-align: middle;
+	box-shadow: 0px 5px 15px #212121;
+}
+#Section3Description{
+	width: 350px;
+	height: 500px;
+	padding: 25px;
+	margin: auto;
+	background-color: #D6F2FF;
+	right: 10vw;
+	top: 20vh;
+	position: absolute;
+	text-align: center;
+	vertical-align: middle;
+	box-shadow: 0px 5px 15px #212121;
+}
+#sec2Desc{
+	font-family: "Fira Sans";
+	font-size: 20px;
+}
+#sec3Desc{
+	margin-top: -10px;
+	font-family: "Fira Sans";
+	font-size: 30px;
+	font-weight: bold;
+}
+#AboutMe, #MySkills, #LabsProjects{
+	margin: auto;
+  	left: 0;
+	right: 0;
+	top: 10vh;
+	position: absolute;
+	transform: translate(0, -50%);
+	text-align: center;
+	vertical-align: middle;
+	font-size: 65px;
+	font-family: "Fira Sans";
+	text-shadow: 0 1px 0 #888, 0 2px 0 #777, 0 3px 0 #666, 0 4px 0 #444, 0 5px 0 #111, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+	animation: textShadow 1.6s infinite;
+}
+#featuredText{
+	font-family: "Fira Sans";
+	font-size: 30px;
+	font-weight: bold;
+	margin: auto;
+  	left: 0;
+	right: 0;
+	position: absolute;
+	top: 20%;
+	text-align: center;
+	vertical-align: middle;
+}
+#chartContainer{
+	background-color:rgba(255,255,255,0.90);
+	margin: auto;
+	left: 10vw;
+	top: 20vh;
+	position: absolute;
+	text-align: center;
+	vertical-align: middle;
+	width: 50%;
+	height: 550px;
+	box-shadow: 0px 5px 15px #212121;
+}
+.apexcharts-xaxis-title{
+	font-size: 20px;
+	font-family: "Fira Sans";
+	font-weight: bold;
+}
+.adobeLogo{
+	width: 60%;
+	padding: 5px 0;
+}
+#AdobeInfo{
+	position: relative;
+	left: 20%;
+}
+.hvrbox,
+.hvrbox * {
+	box-sizing: border-box;
+}
+.hvrbox {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	height: auto;
+}
+.hvrbox img {
+	max-width: 100%;
+}
+.hvrbox .hvrbox-layer_bottom {
+	display: block;
+}
+.hvrbox .hvrbox-layer_top {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 60%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	padding: 15px;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-ms-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+}
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
+	opacity: 1;
+}
+.hvrbox .hvrbox-text {
+	text-align: center;
+	font-size: 30px;
+	font-family: "Fira Sans";
+	font-weight: bold;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.hvrbox .hvrbox-text_mobile {
+	font-size: 15px;
+	border-top: 1px solid rgb(179, 179, 179); /* for old browsers */
+	border-top: 1px solid rgba(179, 179, 179, 0.7);
+	margin-top: 5px;
+	padding-top: 2px;
+	display: none;
+}
+.hvrbox.active .hvrbox-text_mobile {
+	display: block;
+}
+#Sec4ImageHolder{
+	margin: auto;
+  	left: 0;
+	right: 0;
+	position: absolute;
+	top: 25%;
+	text-align: center;
+	vertical-align: middle;
+}
+.section4Image{
+	width: 50%;
+	padding: 20px;
+}
+button {
+  background: none;
+  border: 2px solid;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  font-family: "Fira Sans";
+  font-size: 20px;
+}
+.fill {
+  background: black;
+  border: 2px solid;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em; }
+
+.fill {
+  --color: #fff;
+  --hover: #fff; }
+
+button {
+  color: var(--color);
+  transition: 0.25s;}
+  button:hover, button:focus {
+    border-color: var(#000);
+	background: var(--hover);
+		  color: #000; }
+
+#buttonSection{
+	margin: auto;
+  	left: 0;
+	right: 0;
+	position: absolute;
+	top: 75%;
+	text-align: center;
+	vertical-align: middle;
+}
+#bloggerButton:hover, #workButton:hover{
+	cursor: pointer;
+}
+/*CODE FOR EFFECTS */
+
+@keyframes textShadow {
+  0% {
+    text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  5% {
+    text-shadow: 2.7928974010788217px 0 1px rgba(0,30,255,0.5), -2.7928974010788217px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  10% {
+    text-shadow: 0.02956275843481219px 0 1px rgba(0,30,255,0.5), -0.02956275843481219px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  15% {
+    text-shadow: 0.40218538552878136px 0 1px rgba(0,30,255,0.5), -0.40218538552878136px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  20% {
+    text-shadow: 3.4794037899852017px 0 1px rgba(0,30,255,0.5), -3.4794037899852017px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  25% {
+    text-shadow: 1.6125630401149584px 0 1px rgba(0,30,255,0.5), -1.6125630401149584px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  30% {
+    text-shadow: 0.7015590085143956px 0 1px rgba(0,30,255,0.5), -0.7015590085143956px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  35% {
+    text-shadow: 3.896914047650351px 0 1px rgba(0,30,255,0.5), -3.896914047650351px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  40% {
+    text-shadow: 3.870905614848819px 0 1px rgba(0,30,255,0.5), -3.870905614848819px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  45% {
+    text-shadow: 2.231056963361899px 0 1px rgba(0,30,255,0.5), -2.231056963361899px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  50% {
+    text-shadow: 0.08084290417898504px 0 1px rgba(0,30,255,0.5), -0.08084290417898504px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  55% {
+    text-shadow: 2.3758461067427543px 0 1px rgba(0,30,255,0.5), -2.3758461067427543px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  60% {
+    text-shadow: 2.202193051050636px 0 1px rgba(0,30,255,0.5), -2.202193051050636px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  65% {
+    text-shadow: 2.8638780614874975px 0 1px rgba(0,30,255,0.5), -2.8638780614874975px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  70% {
+    text-shadow: 0.48874025155497314px 0 1px rgba(0,30,255,0.5), -0.48874025155497314px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  75% {
+    text-shadow: 1.8948491305757957px 0 1px rgba(0,30,255,0.5), -1.8948491305757957px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  80% {
+    text-shadow: 0.0833037308038857px 0 1px rgba(0,30,255,0.5), -0.0833037308038857px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  85% {
+    text-shadow: 0.09769827255241735px 0 1px rgba(0,30,255,0.5), -0.09769827255241735px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  90% {
+    text-shadow: 3.443339761481782px 0 1px rgba(0,30,255,0.5), -3.443339761481782px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  95% {
+    text-shadow: 2.1841838852799786px 0 1px rgba(0,30,255,0.5), -2.1841838852799786px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  100% {
+    text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+}
+
+/* CYCLE PAGERS */
+
+/*
+    these are just the default styles used in the Cycle2 demo pages.  
+    you can use these styles or any others that you wish.
+*/
+
+
+/* set border-box so that percents can be used for width, padding, etc (personal preference) */
+.cycle-slideshow, .cycle-slideshow * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+
+.cycle-slideshow { width: 45%; min-width: 200px; max-width: 500px; margin: 10px auto; padding: 0; position: relative;
+    background: url(http://malsup.github.com/images/spinner.gif) 50% 50% no-repeat;
+
+ }
+
+/* slideshow images (for most of the demos, these are the actual "slides") */
+
+/* in case script does not load */
+.cycle-slideshow img:first-child {
+    position: static; z-index: 100;
+}
+
+/* pager */
+.cycle-pager { 
+    text-align: center; width: 100%; z-index: 500; position: absolute; top: 88%; overflow: hidden;left: -10%;
+}
+.cycle-pager span { 
+    font-family: arial; font-size: 50px; width: 16px; height: 16px; 
+    display: inline-block; color: #ddd; cursor: pointer; 
+}
+.cycle-pager span.cycle-pager-active { color: #FF9A00;}
+.cycle-pager > * { cursor: pointer;}
+
+
+/* caption */
+.cycle-caption { position: absolute; color: white; bottom: 15px; right: 15px; z-index: 700; }
+
+
+/* overlay */
+.cycle-overlay { 
+    font-family: tahoma, arial;
+    position: absolute; bottom: 0; width: 100%; z-index: 600;
+    background: black; color: white; padding: 15px; opacity: .5;
+}
+
+
+/* prev / next links */
+.cycle-prev, .cycle-next { position: absolute; top: 0; width: 30%; opacity: 0; filter: alpha(opacity=0); z-index: 800; height: 100%; cursor: pointer; }
+.cycle-prev { left: 0;  background: url(http://malsup.github.com/images/left.png) 50% 50% no-repeat;}
+.cycle-next { right: 0; background: url(http://malsup.github.com/images/right.png) 50% 50% no-repeat;}
+.cycle-prev:hover, .cycle-next:hover { opacity: .7; filter: alpha(opacity=70) }
+
+.disabled { opacity: .5; filter:alpha(opacity=50); }
+
+
+/* display paused text on top of paused slideshow */
+.cycle-paused:after {
+    content: 'Paused'; color: white; background: black; padding: 10px;
+    z-index: 500; position: absolute; top: 10px; right: 10px;
+    border-radius: 10px;
+    opacity: .5; filter: alpha(opacity=50);
+}
+
+/* 
+    media queries 
+    some style overrides to make things more pleasant on mobile devices
+*/
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+    .cycle-slideshow { width: 200px;}
+    .cycle-overlay { padding: 4px }
+    .cycle-caption { bottom: 4px; right: 4px }
+}
+#particles-js {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2; }
+
+.gradient {
+  -webkit-background: #42A9D6;
+  -ms-background:#42A9D6;
+  -moz-background: #42A9D6;
+  -o-background: #42A9D6;
+  background: #42A9D6; }
+
+#myHobbies{
+	font-family: "Fira Sans";
+	font-size: 20px;
+	width: 300px;
+	align-content: center;
+}
+.arrow, .arrow:before {
+	position: absolute;
+	left: 50%;
+}
+
+.arrow {
+	width: 30px;
+	height: 30px;
+	margin: -20px 0 0 -20px;
+	-webkit-transform: rotate(45deg);
+	border-left: none;
+	border-top: none;
+	position: absolute;
+	cursor: pointer;
+	bottom: 5vh;
+	
+}
+
+.arrowMain {
+	border-right: 2px #fff solid;
+	border-bottom: 2px #fff solid;
+}
+
+#arrowMain::before {
+	border-right: 1px #fff solid;
+	border-bottom: 1px #fff solid;
+}
+
+.arrowDown {
+	border-right: 2px #fff solid;
+	border-bottom: 2px #fff solid;
+}
+
+.arrowDown:before {
+	border-right: 1px #fff solid;
+	border-bottom: 1px #fff solid;
+}
+
+.arrowUp {
+	z-index: 5;
+	position: absolute;
+	border-right: 2px #fff solid;
+	border-bottom: 2px #fff solid;
+	-webkit-transform: rotate(225deg);
+	top: 5vh;
+}
+
+.arrowUp:before {
+	border-right: 1px #fff solid;
+	border-bottom: 1px #fff solid;
+}
+
+.arrow:before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	top: 50%;
+	margin: -10px 0 0 -10px;
+	border-left: none;
+	border-top: none;
+	border-right: 1px #000 solid;
+	border-bottom: 1px #000 solid;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-name: arrow;
+}
+
+@keyframes arrow {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-10px, -10px);
+	}
+}
+
+.hvrbox .hvrbox-layer_slideup {
+	-moz-transform: translateY(100%);
+	-webkit-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+}
+.hvrbox:hover .hvrbox-layer_slideup,
+.hvrbox.active .hvrbox-layer_slideup {
+	-moz-transform: translateY(0);
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}
+
+#background {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover); }

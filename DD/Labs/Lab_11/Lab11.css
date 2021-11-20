@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+		background-color: #61F29A;
+		
+	}
+	h1 {
+		color: #0D33F5;
+		font-family: Impact
+			
+	}
+	h2 {
+		color: #0D33F5;
+		font-family: Impact
+	}
+	h3 {
+		color: #0D33F5;
+		font-family: Impact
+	}
+	img {
+		border: solid;
+		border-color: aqua;
+		border-width: thick
+		
+	}
+	p {
+		color: #0D33F5;
+		font-family: Impact;
+		
+	}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab #33</title>
+</head>
+<body>
+	<ul>
+  		<li id="homepageimage" ><img src="../../Index/my_logo_beta.png" width="80" style="padding: 10px 10px" id="topImage"> </li>
+  		<li><p style="letter-spacing: 10px" class="titlehomepage">Lab #33 - Speech Detection</p></li>
+	</ul>
+
+  <div class="words" contenteditable>
+  </div>
+
+	<script src="../../jquery331min.js"></script>
+<script>
+	
+//THIS JQUERY FUNCTION ALLOWS THE LOGO IMAGE TO TAKE YOU BACK TO THE MAIN INDEX	
+			
+		$("#homepageimage").click(function(){
+			var img = $("#topImage");
+			img.animate({ width: '70px', padding: '20px 20px' }, 250);
+			img.animate({ width: '80px', padding: '10px 10px' }, 250);
+			location.href = "../../../";
+			});	
+	
+  window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const recognition = new SpeechRecognition();
+  recognition.interimResults = true;
+  recognition.lang = 'en-US';
+  
+  let p = document.createElement('p');
+  const words = document.querySelector('.words');
+  words.appendChild(p);
+  recognition.addEventListener('result', e => {
+    const transcript = Array.from(e.results)
+      .map(result => result[0])
+      .map(result => result.transcript)
+      .join('');
+      const poopScript = transcript.replace(/poop|poo|shit|dump/gi, '💩');
+      p.textContent = poopScript;
+      if (e.results[0].isFinal) {
+        p = document.createElement('p');
+        words.appendChild(p);
+      }
+  });
+  recognition.addEventListener('end', recognition.start);
+  recognition.start();
+</script>
+
+
+  <style>
+    html {
+      font-size: 10px;
+	  margin: 0;
+    }
+    body {
+      background-image: url(../../Projects/Project_6/background.png);
+	  background-size: cover;
+      font-family: 'helvetica neue';
+      font-weight: 200;
+      font-size: 20px;
+    }
+    .words {
+      max-width: 500px;
+      margin: 50px auto;
+	  margin-top: 150px;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+      padding: 1rem 2rem 1rem 5rem;
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+      background-size: 100% 3rem;
+      position: relative;
+      line-height: 3rem;
+    }
+    
+    p {
+      margin: 0 0 3rem;
+    }
+    .words:before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      top: 0;
+      left: 30px;
+      bottom: 0;
+      border: 1px solid;
+      border-color: transparent #efe4e4;
+    }
+	  ul {
+    	position: fixed;
+    	list-style-type: none;
+    	margin: 0;
+   	 	padding: 0;
+    	overflow: hidden;
+    	background-color: rgba(24,24,24,0.86);
+    	position: fixed;
+    	top: 0;
+		left: 0;
+    	width: 100%;
+		z-index: 1;
+	
+}
+
+	li {
+   	 	float: left;
+		top: 120px;
+}
+
+	li p{
+    	display: block;
+    	color: white;
+    	text-align: center;
+   	 	padding-left: 20px;
+    	text-decoration: none;
+		font-family: "Helvetica";
+		font-size: 32px;
+	
+}
+	#topImage {
+		border-radius: 20px;
+}
+	  #topImage:hover{
+		  cursor: pointer;
+	  }
+	  .titlehomepage{
+		  margin-top: 30px;
+	  }
+  </style>
+
+</body>
+</html>

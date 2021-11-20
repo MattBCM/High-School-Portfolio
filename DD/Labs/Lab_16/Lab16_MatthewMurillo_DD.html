@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lab 16 Matthew Murillo</title>
+<link rel="stylesheet" href="Lab16.css">
+<link rel="icon" type="image/png" href="http://techteach.us/Web2019/Mmatthew/Labs/Lab_7/my_logo_beta.png">
+</head>
+
+<body>
+<center>
+<h1 id="center">Lab # 16</h1>
+<h2>Digital Design</h2>
+<h3>Matthew Murillo</h3>
+<h4>3-13-18</h4>
+<p id="demo"> Before you click on the button below, I would like to tell you that the whole text would change because of that button. I was able to do this with JavaScript. This is my first time using JavaScript on a webpage and to show off it, I created the button below. All fo the elements that is applied in the demo tag would be applied into the new text once the button is clicked. Using this would help me get an idea of what is to come up with JavaScript in my web pages. This would also let me create interactive buttons that would blow people minds.  </p>
+<audio id="oof" src="OOF.mp3" preload="auto"></audio>
+<button type="button" onClick="myFirstJavaScript()" id="button">
+	CLICK HERE</button>
+
+<script>
+	function myFirstJavaScript(){
+		document.getElementById("demo").innerHTML="Hello World, This is my first JS function";
+		document.getElementById("oof").play();
+		document.getElementById("button").innerHTML="OOF";
+		
+	}
+	
+</script>
+	</center>
+</body>
+</html>

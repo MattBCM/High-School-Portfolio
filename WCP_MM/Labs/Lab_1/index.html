@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab #1</title>
+<link rel="stylesheet" href="Lab1css.css"></link>
+<link rel="icon" type="image/png" href="http://techteach.us/Web2019/Mmatthew/Labs/Lab_7/my_logo_beta.png"></link>
+</head>
+<!-- TOP NAVIGATION BAR/TITLE -->
+<body>
+	<ul>
+  		<li id="homepageimage" ><img src="../../Index/my_logo_beta.png" width="135" style="padding: 10px 10px"id="topImage"> </li>
+  		<li><p style="letter-spacing: 10px" class="titlehomepage">Lab #1 - Introduction</p></li>
+		<li>
+		
+		</li>
+	</ul>
+<!-- Picture -->	
+<center>
+`	<div id="somethin">
+		<img src="picofme.PNG" width="300px">
+	</div>
+</center>
+<center>
+<!-- Information on the bottom -->
+<div id="Info">
+Hi guys, my name is Matthew Murillo and I am a Web Design senior at Information Technology High School. Right now, the field of study that I am interested on is Computer Science. The reason why I want to focus on Computer Science is because I have an interest in creating stuff on the internet and I would like to have that as a job or hobby in the future. Also I want to study on Computer Science, because in the near future, basically there will be technology everywhere that will need programmers to program them. Having a job in programming would be very demanding, so its a good idea to study on Computer Science.
+
+<br><br>
+
+I do many things in my free time like play games with my friends, read some articles and also enjoy some time with my family. I basically would like to do tasks that allows me to interact with the people I know. My dreams for the future is to create games that appeals to people and for them to have fun with it. It would be cool to work in a game developer studio, but i would like to make some side projects of my own. Basically my goals is to get into college, get a Masters Degree in Computer Science and to make my parents proud of who I am
+</div>
+	</center>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	//THIS JQUERY FUNCTION ALLOWS THE LOGO IMAGE TO TAKE YOU BACK TO THE MAIN INDEX
+	$(document).ready(function(){
+		$("#homepageimage").click(function(){
+			var img = $("#topImage");
+			img.animate({ width: '115px', padding: '20px 20px' }, 250);
+			img.animate({ width: '135px', padding: '10px 10px' }, 250);
+			location.href = "http://techteach.us/Web2019/Mmatthew/WCP_MM/";
+			});
+	});
+</script>
+
+</body>
+</html>

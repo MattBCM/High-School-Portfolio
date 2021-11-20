@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Technology For Good</title>
+<script src="../../jquery331min.js"></script>
+<script src="../Project_2/parallax.js-1.5.0/parallax.min.js"></script>
+<script src="../Peoject_2/parallax.js-1.5.0/parallax.js"></script>
+<style>
+body{
+	margin:0;
+
+}
+html{
+	width: 100%;
+}
+
+#TopNavi {
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	height: 80px;
+    background-color: rgba(255,255,255,0.60);
+	left: 0;
+    top: 0;
+    width: 100%;
+	z-index: 2;
+	animation: 1s ease-out 0s 1 slidesInFromTop;
+
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding-left: 20px;
+    text-decoration: none;
+	font-family: "Helvetica";
+	top:25px;
+	font-size: 30px;
+	position: relative;
+
+}
+#homeNavButton {
+	padding: 0 5px 0 14px;
+  transition: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+#homeNavButton:hover{
+  	color: #32a4cb;
+}
+#navImage img {
+	width: 100px;
+}
+
+#missionNavButton{
+	transition: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in;
+}
+#missionNavButton:hover{
+	color: #32a4cb;
+}
+#buyNavButton{
+	transition: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in;
+}
+#buyNavButton:hover{
+	color: #32a4cb;
+}
+
+.hoverEffect > a {
+  color: #000;
+  text-decoration: none;
+}
+
+.hoverEffect > a:hover {
+  color: #000;
+}
+.hoverEffect > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.hoverEffect > a:hover:before {
+	background-color: #32a4cb;
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+	.parallax {
+    /* Set a specific height */
+    min-height: 500px;
+}
+p {
+	font-family: helvetica;
+	font-size: 20px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="container">
+  <ul id="TopNavi">
+  	<li id="navImage"><img src="images/logo.png"></li>
+  	<li class="hoverEffect"><a style="letter-spacing: 3px" id="edu">Education</a></li>
+  	<li><a style="letter-spacing: 10px">|</a></li>
+  	<li class="hoverEffect"><a style="letter-spacing: 3px" id="pov">Poverty</a></li>
+  	<li><a style="letter-spacing: 10px">|</a></li>
+  	<li class="hoverEffect"><a style="letter-spacing: 3px" id="opp">Opportunities</a></li>
+  </ul>
+  	</div>
+<!-- Information -->
+<div class="parallax" data-parallax="scroll" data-image-src="somethin.jpg"></div>
+	<center>
+		<div id="education">
+		<p>Education</p>
+	<table>
+		<th>
+		<div class="imgContainer">
+		  <img src="https://amp.businessinsider.com/images/589294ea3149a1b6008b47d5-750-500.jpg" alt="" class="image" width="50%">
+		</div></th>
+		<th> IMAGE</th></table><br><br></div>
+<div id="Poverty">
+		<p>Poverty</p>
+		<table>
+		<th>
+		<div class="imgContainer">
+		  <img src="https://media.wnyc.org/i/800/0/l/85/1/AP_585496653134.jpg" alt="" class="image" width="50%">
+		</div></th>
+	<th>Even with America's largest economy; nevertheless, it has more poverty than most countries with similar standards of living.<br>
+	Growing income inequality and the Great Recession have made the problem worse.</th></table><br><br></div>
+<div id="opportunities">
+	<p>Opportunities</p>
+	<table>
+		<th>
+		<div class="imgContainer">
+		  <img src="https://nz.usembassy.gov/wp-content/uploads/sites/13/2015/07/edusa-advising.jpg" alt="" class="image" width="50%">
+			</div></th>
+		<th>IMAGE</th>
+	</table></div>
+		</center>
+<script>
+
+$(function(){
+	$("#edu").on("click", function(){
+  document.querySelector('#education').scrollIntoView({
+  behavior: 'smooth'});
+});
+$("#pov").on("click", function(){
+  document.querySelector('#poverty').scrollIntoView({
+  behavior: 'smooth'});
+});
+$("#opp").on("click", function(){
+  document.querySelector('#opportunities').scrollIntoView({
+    behavior: 'smooth'
+  });
+});
+
+</script>
+</body>
+</html>

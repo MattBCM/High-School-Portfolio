@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#header {
+	margin: 50px 500px 50px 500px;
+	border: dashed 10px #0BEDBE;
+	background-color:#B2F0D1;
+	align-self: center;
+	font-family: Comic Sans MS;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #0CF7E4;
+    border: dashed 2px #0BEDBE;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #3781EF;
+}
+body {
+	background-image: url(../../Projects/Project_1/Project_1_Background.png);
+	background-repeat: repeat-x;
+	background-position: right top;
+	background-attachment: fixed;
+}
+#title {
+	margin: 50px 50px 50px 50px;
+	border: dashed 10px #0BEDBE;
+	padding: 50px 50px 50px 50px;
+	font-size: 50px;
+	background-color: #B2F0D1;
+	font-family: Comic Sans MS;
+	text-decoration: underline;
+	text-shadow: 2px 1px gray;
+		
+}
+img {
+	width:50%;
+}
+#image {
+	width:100%;
+	padding: 10px 0px 10px 0px;
+	font-size: 10px
+}
+#paragraph {
+	margin: 10px 300px 0px 300px;
+	font-size: 30px;
+	background-color: #B2F0D1;
+	font-family: cursive;
+	border: dashed 10px #0BEDBE;
+
+}
+#image-section :hover {
+	background-color: #B2F0D1;
+}
+.dropbtn {
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 40px 10px 40px;
+    font-size: 16px;
+    border: none;
+   }
+.dropdown {
+    position: relative;
+    display: inline-block;
+   }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+    border-bottom: 2px solid #0060c3;
+    border-left: 2px solid #0060c3;
+    border-right: 2px solid #0060c3;
+}
+
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #0060c3;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #0060c3;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 3px solid #0060c3;
+}
+
+div.gallery img {
+    width: 100%;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    font-size: 15px;
+    font-family: Comic Sans MS;
+    background-color: #B2F0D1;
+}
+#gallery-title {
+    font-size: 30px;
+    font-family: Comic Sans MS;
+}

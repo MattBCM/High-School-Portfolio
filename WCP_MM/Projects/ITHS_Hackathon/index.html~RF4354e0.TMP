@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Technology For Good</title>
+<script src="../../jquery331min.js"></script>
+<script src="../Project_2/parallax.js-1.5.0/parallax.min.js"></script>
+<script src="../Peoject_2/parallax.js-1.5.0/parallax.js"></script>
+<style>
+body{
+	margin:0;
+
+}
+html{
+	width: 100%;
+}
+
+#TopNavi {
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	height: 80px;
+    background-color: rgba(255,255,255,0.60);
+	left: 0;
+    top: 0;
+    width: 100%;
+	z-index: 2;
+	animation: 1s ease-out 0s 1 slidesInFromTop;
+
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding-left: 20px;
+    text-decoration: none;
+	font-family: "Helvetica";
+	top:25px;
+	font-size: 30px;
+	position: relative;
+
+}
+#homeNavButton {
+	padding: 0 5px 0 14px;
+  transition: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+#homeNavButton:hover{
+  	color: #32a4cb;
+}
+#navImage img {
+	width: 100px;
+}
+
+#missionNavButton{
+	transition: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in;
+}
+#missionNavButton:hover{
+	color: #32a4cb;
+}
+#buyNavButton{
+	transition: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in;
+}
+#buyNavButton:hover{
+	color: #32a4cb;
+}
+
+.hoverEffect > a {
+  color: #000;
+  text-decoration: none;
+}
+
+.hoverEffect > a:hover {
+  color: #000;
+}
+.hoverEffect > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.hoverEffect > a:hover:before {
+	background-color: #32a4cb;
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+.imgContainer {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 200px;
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  width: 300px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.imgContainer:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+</style>
+
+</head>
+
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="container">
+  <ul id="TopNavi">
+  	<li id="navImage"><img src="images/logo.png"></li>
+  	<li class="hoverEffect"><a style="letter-spacing: 3px" id="homeNavButton">Education</a></li>
+  	<li><a style="letter-spacing: 10px">|</a></li>
+  	<li class="hoverEffect"><a style="letter-spacing: 3px" id="missionNavButton" href="Mission_Statement/">Poverty</a></li>
+  	<li><a style="letter-spacing: 10px">|</a></li>
+  	<li class="hoverEffect"><a style="letter-spacing: 3px" id="buyNavButton" href="Shop/">Opportunities</a></li>
+  </ul>
+  	</div>
+<!-- Information -->
+<div class="parallax" data-parallax="scroll" data-image-src="somethin.jpg"></div>
+		<div class="imgContainer">
+		  <img src="https://amp.businessinsider.com/images/589294ea3149a1b6008b47d5-750-500.jpg" alt="">
+		  <div class="overlay">
+		    <div class="text">...</div>
+		  </div>
+		</div>
+<script>
+
+
+</script>
+</body>
+</html>

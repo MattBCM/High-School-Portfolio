@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Cardio 💪</title>
+  <link rel="icon" href="../../Index/my_logo_beta.png">
+  <style>
+	  
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  background-image: url( ../../Projects/Project_6/background.png);
+	background-size: cover;
+	background-attachment: fixed;
+  margin: 0;
+  margin-top: 100px
+}
+	  #somethin{
+	position: relative;
+	margin: auto;
+  	left: 0;
+	right: 0;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	text-align: center;
+	vertical-align: middle;
+	font-size: 50px;
+	  }
+	ul {
+    	position: fixed;
+    	list-style-type: none;
+    	margin: 0;
+   	 	padding: 0;
+    	overflow: hidden;
+    	background-color: rgba(24,24,24,0.86);
+    	position: fixed;
+    	top: 0;
+    	width: 100%;
+		z-index: 1;
+	
+}
+
+	li {
+   	 	float: left;
+}
+
+	li p {
+    	display: block;
+    	color: white;
+    	text-align: center;
+   	 	padding-left: 20px;
+    	text-decoration: none;
+		font-family: "Helvetica";
+		font-size: 32px;
+	
+}
+	#topImage {
+		border-radius: 20px;
+}
+	  #topImage:hover{
+		  cursor: pointer;
+	  }
+  </style>
+	
+</head>
+<body>
+	<ul>
+  		<li id="homepageimage" ><img src="../../Index/my_logo_beta.png" width="80" style="padding: 10px 10px" id="topImage"> </li>
+  		<li><p style="letter-spacing: 10px" class="titlehomepage">Lab #18 - Array Cardio Day #1</p></li>
+	</ul>
+  <p><em id="somethin">Psst: have a look at the JavaScript Console <span>😉</span></em>
+	</p>
+  <script>
+	  
+//THIS JQUERY FUNCTION ALLOWS THE LOGO IMAGE TO TAKE YOU BACK TO THE MAIN INDEX	
+			
+		$("#homepageimage").click(function(){
+			var img = $("#topImage");
+			img.animate({ width: '70px', padding: '20px 20px' }, 250);
+			img.animate({ width: '80px', padding: '10px 10px' }, 250);
+			location.href = "../../../";
+			});	  
+	  
+    // Get your shorts on - this is an array workout!
+    // ## Array Cardio Day 1
+    // Some data we can work with
+    const inventors = [
+      { first: 'Rosalind', last: 'Franklin', year: 1920, passed: 1958, why: 'discovered double helix structure' },
+      { first: 'Margaret', last: 'Thacther', year: 1925, passed: 2013, why: 'Britains first female prime minister' },
+      { first: 'Angela', last: 'Burdett-Coutts', year: 1814, passed: 1906, why: 'was made a baroness by Queen Victoria' },
+      { first: 'Florence', last: 'Nightingale', year: 1820, passed: 1910, why: 'led the first official team of British Military nurses' },
+      { first: 'Marie', last: 'Stopes', year: 1880, passed: 1958, why: 'advocate of birth conrol and sex educator' },
+      { first: 'Diana', last: 'Spencer', year: 1961, passed: 1997, why: 'charity for sick children, awareness for cancer' },
+      { first: 'Amelia', last: 'Earhart', year: 1897, passed: 1937, why:'broke world records and first woman to fly across the Atlantic ocean' },
+      { first: 'Josephine', last: 'Butler', year: 1828, passed: 1906, why: 'campaigned against child prostitution and sex trafficking' },
+      { first: 'Mary', last: 'Seacole', year: 1805, passed: 1881, why: 'helped service at the Crimean War, healed wounded soldiers' },
+      { first: 'Mary', last: 'Shelley', year: 1797, passed: 1851, why:'political philosopher and feminist activist' },
+      { first: 'Vera', last: 'Atkins', year: 1878, passed: 1968, why:'awarded the Croix de Guerre and appointed a Commandment of the Legion of Honor' },
+      { first: 'Wangari', last: 'Maathai', year: 1940, passed: 2011, why:'environmental activist that campaigned for planting trees' }
+    ];
+    const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
+    // Array.prototype.filter()
+    // 1. Filter the list of inventors for those who were born in the 1500's
+	  const fifteen = inventors.filter(inventor => (inventor.year >= 1800 && inventor.year < 1900));
+	  
+	     console.table(fifteen);
+    // Array.prototype.map()
+    // 2. Give us an array of the inventors' first and last names
+	  const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+    console.log(fullNames);
+    // Array.prototype.sort()
+    // 3. Sort the inventors by birthdate, oldest to youngest
+	  const ordered = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
+    console.table(ordered);
+
+    // Array.prototype.reduce()
+    // 4. How many years did all the inventors live?
+	  const totalYears = inventors.reduce((total, inventor) => {
+      return total + (inventor.passed - inventor.year);
+    }, 0);
+	    console.log(totalYears);
+    // 5. Sort the inventors by years lived
+	   const oldest = inventors.sort(function(a, b) {
+      const lastInventor = a.passed - a.year;
+      const nextInventor = b.passed - b.year;
+      return lastInventor > nextInventor ? -1 : 1;
+    });
+	   console.table(oldest);
+    // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+    // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    // 7. sort Exercise
+    // Sort the people alphabetically by last name
+	   const alpha = people.sort((lastOne, nextOne) => {
+      const [aLast, aFirst] = lastOne.split(', ');
+      const [bLast, bFirst] = nextOne.split(', ');
+      return aLast > bLast ? 1 : -1;
+    });
+    console.log(alpha);
+    // 8. Reduce Exercise
+    // Sum up the instances of each of these
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+	  
+	      const transportation = data.reduce(function(obj, item) {
+      if (!obj[item]) {
+        obj[item] = 0;
+      }
+      obj[item]++;
+      return obj;
+    }, {});
+    console.log(transportation);
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lab 17 Matthew Murillo</title>
+<link rel="stylesheet" href="Lab17.css">
+<link rel="icon" type="image/png" href="../Lab_7/my_logo_beta.png">
+</head>
+
+<body>
+<center>
+<h1 id="center"> Lab #17</h1>
+<h2>Digital Design</h2>
+<h3>Matthew Murillo</h3>
+<h4>3-14-18</h4>
+
+<form name="alertform">
+	Enter Your Name: <input class="textbox" type="text" name="yourname">   <input class="button" type="button" value="GO!"
+				
+															   onClick="audio(); window.alert('Hello ' + document.alertform.yourname.value);"
+></form>
+<br>
+Fill The Information Below<br><br>
+<div>
+<form name="forum">
+Name: <input class="textbox" type="text" name="name"><br><br>
+Phone Number: <input class="textbox" type="text" name="phone"><br><br>
+Email Address: <input class="textbox" type="text" name="email"><br><br>
+<input class="button" type="button" value="Enter"
+	   
+	   onClick="audio(); window.alert('Your name is ' + document.forum.name.value + ' with a phone number of ' + document.forum.phone.value + ' and an email address of ' + document.forum.email.value + ', welcome to B.C.M Corp and thank you for registering!')">
+	  
+
+</form>
+	</div>
+	<audio id="victory" src="victory.mp3" preload="auto"></audio>
+<script>
+	function audio() {
+	document.getElementById("victory").play();
+	}
+	</script>
+	</center>
+</body>
+</html>

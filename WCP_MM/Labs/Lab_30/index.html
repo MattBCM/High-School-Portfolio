@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab #30</title>
+</head>
+<body>
+<ul id="Header">
+  		<li id="homepageimage" class="name"><img src="../../Index/my_logo_beta.png" width="80" style="padding: 10px 10px" id="topImage"> </li>
+  		<li class="name"><p style="letter-spacing: 10px" class="titlehomepage">Lab #30 - Sort Without Articles</p></li>
+	</ul>
+	
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url(../../Projects/Project_6/background.png);
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      min-height: 100vh;
+    }
+    #bands {
+      list-style: inside square;
+      font-size: 20px;
+      background: white;
+      width: 500px;
+      margin: auto;
+      margin-top: 150px;
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+    
+    #bands li {
+      border-bottom: 1px solid #efefef;
+      padding: 20px;
+    }
+    
+    #bands li:last-child {
+      border-bottom: 0;
+    }
+    a {
+      color: #ffc600;
+      text-decoration: none;
+    }
+	  #Header {
+    	position: fixed;
+    	list-style-type: none;
+    	margin: 0;
+   	 	padding: 0;
+    	overflow: hidden;
+    	background-color: rgba(24,24,24,0.86);
+    	position: fixed;
+    	top: 0;
+    	width: 100%;
+		z-index: 1;
+	
+}
+
+	.name {
+   	 	float: left;
+}
+
+	.name p {
+    	display: block;
+    	color: white;
+    	text-align: center;
+   	 	padding-left: 20px;
+    	text-decoration: none;
+		font-family: "Helvetica";
+		font-size: 32px;
+	
+}
+	#topImage {
+		border-radius: 20px;
+}
+	  #topImage:hover{
+		  cursor: pointer;
+	  }
+  </style>
+
+  <ul id="bands"></ul>
+
+<script src="../../jquery331min.js"></script>
+<script>
+	
+//THIS JQUERY FUNCTION ALLOWS THE LOGO IMAGE TO TAKE YOU BACK TO THE MAIN INDEX	
+			
+		$("#homepageimage").click(function(){
+			var img = $("#topImage");
+			img.animate({ width: '70px', padding: '20px 20px' }, 250);
+			img.animate({ width: '80px', padding: '10px 10px' }, 250);
+			location.href = "../../../";
+			});	
+	
+const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+function strip(bandName) {
+  return bandName.replace(/^(a |the |an )/i, '').trim();
+}
+const sortedBands = bands.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
+document.querySelector('#bands').innerHTML =
+  sortedBands
+    .map(band => `<li>${band}</li>`)
+    .join('');
+console.log(sortedBands);
+</script>
+
+</body>
+</html>

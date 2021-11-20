@@ -1,0 +1,450 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 17</title>
+<style>
+	body, html{
+		margin: 0;
+		padding: 0;
+			
+		}
+	#header{
+		position: absolute;
+		left: 1;
+		right: 0;
+		}
+	#header h1, h2 {
+		font-family: Helvetica;
+		letter-spacing: 2px;
+		}
+
+	ul {
+    	position: fixed;
+    	list-style-type: none;
+    	margin: 0;
+   	 	padding: 0;
+    	overflow: hidden;
+    	background-color: rgba(24,24,24,0.86);
+    	position: fixed;
+    	top: 0;
+    	width: 100%;
+		z-index: 1;
+	
+}
+
+	li {
+   	 	float: left;
+}
+
+	li p {
+    	display: block;
+    	color: white;
+    	text-align: center;
+   	 	padding-left: 20px;
+    	text-decoration: none;
+		font-family: "Helvetica";
+		font-size: 32px;
+	
+}
+	#topImage {
+		border-radius: 20px;
+}
+	#topImage:hover{
+		cursor: pointer;
+	}
+	#playerSection{
+		height: 100%;
+		position: absolute;
+		width: 50%;
+		background-color: #EF3134;
+		}
+	#computerSection{
+		height: 100%;
+		width: 50%;
+		background-color: aqua;
+		position: absolute;
+		left: 50%;
+		}
+	.playerChoices{
+		width: 200px;
+		height: 200px;
+		background-color: aliceblue;
+		border-radius: 20px;
+		transition: all .2s ease-in;
+	}
+	.playerChoices:hover{
+	background-color: rgba(255,149,151,1.00)
+	}
+	#rock{
+		position: absolute;
+		left: 5%;
+		top: 50%;
+		background-image: url(rock.png);
+		background-size: cover;
+		
+	}
+	#paper{
+		position: absolute;
+		left: 37.5%;
+		top: 50%;
+		background-image: url(toiletpaper.png);
+		background-size: cover;
+		
+	}
+	#scissor{
+		position: absolute;
+		left: 70%;
+		top: 50%;
+		background-image: url(scissors.png);
+		background-size: cover;
+		
+	}
+	#chooseOne{
+		font-family: Helvetica;
+		font-size: 40px;
+	}
+	#computerText{
+		font-family: Helvetica;
+		font-size: 60px;
+		width: 40%;
+		position: absolute;
+		left: 35%;
+		top: 40%;
+	}
+	
+	/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+	  font-size: 25px;
+		font-family: 'Open Sans', sans-serif;
+    background-color: #C026ED;
+		color: #01565A;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+		height:100px;
+		top: 10%;
+    border: 1px solid #C026ED;
+		border-radius: 5px;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #fefefe;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+		transition:all;
+		transition-duration: 0.2s;
+		transition-timing-function: ease-in;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#suggestions{
+	color: #01565A;
+	text-align: center;
+}
+/*Animation*/
+@keyframes slidesInFromTop {
+  0% {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+	80% {
+		transform: translateY(10%);
+	}
+  100% {
+      transform: translateX(0);
+      opacity: 1 ;
+  }
+}
+.anim {
+			animation: 1s ease-out 0s 1 slidesInFromTop;
+		  font-size: 25px;
+			font-family: 'Open Sans', sans-serif;
+	    background-color: #C026ED;
+			color: #01565A;
+	    margin: 5% auto; /* 15% from the top and centered */
+	    padding: 15px;
+			height:500px;
+			top: 20%;
+	    border: 1px solid #C026ED;
+			border-radius: 5px;
+	    width: 50%; /* Could be more or less, depending on screen size */
+}
+	#imageModal{
+		width: 200px;
+	}
+	#suggestions{
+		font-size: 40px;
+	}
+	#rulesButton{
+		width: 70px;
+		height: 30px;
+		position: absolute;
+		left: 90%;
+		top: 150px;
+	}
+	</style>					
+</head>
+
+<body>
+	<ul>
+  		<li id="homepageimage" ><img src="../../Index/my_logo_beta.png" width="80" style="padding: 10px 10px" id="topImage"> </li>
+  		<li><p style="letter-spacing: 10px" class="titlehomepage">Lab #17 - "Rock Paper Scissor" Modded Game</p></li>
+		<li>
+		
+		</li>
+	</ul>
+<div id="mainSection">
+	<div id="playerSection">
+		<center>
+		<br><br><br><br><br><br>
+		<h1 id="chooseOne">Choose One</h1>
+		</center>
+		
+		<div id="rock" class="playerChoices"></div>
+		<div id="paper" class="playerChoices"></div>
+		<div id="scissor" class="playerChoices"></div>
+
+	</div>
+	<div id="computerSection">
+	<center>
+		<div id="computerText">Computer Has Decided</div>
+	</center>
+		<button id="rulesButton" >Rules</button>
+	</div>	
+</div>
+	
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+ <!-- Modal content -->
+ <div class="modal-content" id="modalcontent">
+	 <span class="close" id="closeButton">&times;</span>
+	 <center>
+	 <p id="modalText" ></p> 
+	 <div id="modalText2" class="playerChoices"><img src="rock.png" id="imageModal"></div>
+	 </center>
+	 <p id="suggestions"></p>
+ </div>
+	
+	<!--SCRIPT-->
+	
+<script src="../../jquery331min.js"></script>
+<script>
+	
+//THIS JQUERY FUNCTION ALLOWS THE LOGO IMAGE TO TAKE YOU BACK TO THE MAIN INDEX	
+			
+		$("#homepageimage").click(function(){
+			var img = $("#topImage");
+			img.animate({ width: '70px', padding: '20px 20px' }, 250);
+			img.animate({ width: '80px', padding: '10px 10px' }, 250);
+			location.href = "../../../";
+			});	
+	
+var rock = $("#rock");
+var paper = $("#paper");
+var scissor = $("#scissor");
+var rules = $("#rulesButton");
+var modal = document.getElementById('myModal');
+var modalText= document.getElementById('modalText');
+	
+$(function(){
+	rock.on("click", function(){		
+var span = document.getElementsByClassName("close")[0];
+var modal = document.getElementById('myModal');
+var modalText= document.getElementById('modalText');
+var x = Math.floor((Math.random() * 3) + 1);
+		
+if(x == 1){
+		$("#modalText").html("Computer has chosen <strong>Rock!</strong>");
+		$("#imageModal").attr("src", "rock.png");
+		$("#suggestions").html("ITS A TIE!");
+	}
+else if(x == 2){
+		$("#modalText").html("Computer has chosen <strong>Paper!</strong>");
+		$("#imageModal").attr("src", "toiletpaper.png");
+		$("#suggestions").html("YOU WIN!");
+}
+else if(x == 3){
+		$("#modalText").html("Computer has chosen <strong>Scissor!</strong>");
+		$("#imageModal").attr("src", "scissors.png");
+		$("#suggestions").html("YOU LOSE!");
+}
+	
+	 	  modal.style.display = "block";
+ 	 /*submit_btn.onclick = function() {
+ 			 modal.style.display = "block";
+ 	 }
+ 	 */
+	 function ani2() {
+		 document.getElementById("modalcontent").className ='anim2';
+	 }
+ 	 // When the user clicks on <span> (x), close the modal
+ 	 span.onclick = function() {
+		 	modal.style.display="none";
+ 	 }
+
+ 	 // When the user clicks anywhere outside of the modal, close it
+ 	 window.onclick = function(event) {
+ 			 if (event.target == modal) {
+ 					 modal.style.display = "none";
+ 			 }
+ 	 }
+		function ani() {
+			document.getElementById("modalcontent").className ='anim';
+		}
+		ani();	
+	});
+	
+	paper.on("click", function(){		
+var span = document.getElementsByClassName("close")[0];
+var modal = document.getElementById('myModal');
+var modalText= document.getElementById('modalText');
+var x = Math.floor((Math.random() * 3) + 1);
+		
+if(x == 1){
+		$("#modalText").html("Computer has chosen <strong>Rock!</strong>");
+		$("#imageModal").attr("src", "rock.png");
+		$("#suggestions").html("YOU LOSE!");
+	}
+else if(x == 2){
+		$("#modalText").html("Computer has chosen <strong>Paper!</strong>");
+		$("#imageModal").attr("src", "toiletpaper.png");
+		$("#suggestions").html("ITS A TIE!");
+}
+else if(x == 3){
+		$("#modalText").html("Computer has chosen <strong>Scissor!</strong>");
+		$("#imageModal").attr("src", "scissors.png");
+		$("#suggestions").html("YOU WIN!!");
+}
+	
+	 	  modal.style.display = "block";
+ 	 /*submit_btn.onclick = function() {
+ 			 modal.style.display = "block";
+ 	 }
+ 	 */
+	 function ani2() {
+		 document.getElementById("modalcontent").className ='anim2';
+	 }
+ 	 // When the user clicks on <span> (x), close the modal
+ 	 span.onclick = function() {
+		 	modal.style.display="none";
+ 	 }
+
+ 	 // When the user clicks anywhere outside of the modal, close it
+ 	 window.onclick = function(event) {
+ 			 if (event.target == modal) {
+ 					 modal.style.display = "none";
+ 			 }
+ 	 }
+		function ani() {
+			document.getElementById("modalcontent").className ='anim';
+		}
+		ani();	
+	});
+	
+	scissor.on("click", function(){		
+var span = document.getElementsByClassName("close")[0];
+var modal = document.getElementById('myModal');
+var modalText= document.getElementById('modalText');
+var x = Math.floor((Math.random() * 3) + 1);
+		
+if(x == 1){
+		$("#modalText").html("Computer has chosen <strong>Rock!</strong>");
+		$("#imageModal").attr("src", "rock.png");
+		$("#suggestions").html("YOU WIN!");
+	}
+else if(x == 2){
+		$("#modalText").html("Computer has chosen <strong>Paper!</strong>");
+		$("#imageModal").attr("src", "toiletpaper.png");
+		$("#suggestions").html("YOU LOSE!");
+}
+else if(x == 3){
+		$("#modalText").html("Computer has chosen <strong>Scissor!</strong>");
+		$("#imageModal").attr("src", "scissors.png");
+		$("#suggestions").html("ITS A TIE!");
+}
+	
+	 	  modal.style.display = "block";
+ 	 /*submit_btn.onclick = function() {
+ 			 modal.style.display = "block";
+ 	 }
+ 	 */
+	 function ani2() {
+		 document.getElementById("modalcontent").className ='anim2';
+	 }
+ 	 // When the user clicks on <span> (x), close the modal
+ 	 span.onclick = function() {
+		 	modal.style.display="none";
+ 	 }
+
+ 	 // When the user clicks anywhere outside of the modal, close it
+ 	 window.onclick = function(event) {
+ 			 if (event.target == modal) {
+ 					 modal.style.display = "none";
+ 			 }
+ 	 }
+		function ani() {
+			document.getElementById("modalcontent").className ='anim';
+		}
+		ani();	
+	});
+	rules.on("click", function(){		
+var span = document.getElementsByClassName("close")[0];
+var modal = document.getElementById('myModal');
+var modalText= document.getElementById('modalText');
+		
+ $("#modalText").html("");		
+ $("#imageModal").attr("src", "rules.png");
+ $("#suggestions").html("Rock Beats Paper<br><br>Paper Beats Scissor<br><br>Scissor Beats Rock");
+	
+	 	  modal.style.display = "block";
+ 	 /*submit_btn.onclick = function() {
+ 			 modal.style.display = "block";
+ 	 }
+ 	 */
+	 function ani2() {
+		 document.getElementById("modalcontent").className ='anim2';
+	 }
+ 	 // When the user clicks on <span> (x), close the modal
+ 	 span.onclick = function() {
+		 	modal.style.display="none";
+ 	 }
+
+ 	 // When the user clicks anywhere outside of the modal, close it
+ 	 window.onclick = function(event) {
+ 			 if (event.target == modal) {
+ 					 modal.style.display = "none";
+ 			 }
+ 	 }
+		function ani() {
+			document.getElementById("modalcontent").className ='anim';
+		}
+		ani();	
+	});
+	
+});
+</script>
+</body>
+</html>

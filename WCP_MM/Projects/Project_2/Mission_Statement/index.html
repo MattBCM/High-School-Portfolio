@@ -1,0 +1,306 @@
+<!doctype html>
+<!--Misison statement-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>LifeStyle Homepage</title>
+<link rel="icon" href="../images/logo.png">
+<script src="../../../jquery331min.js"></script>
+<script src="../jquery.cycle2.min.js"></script>
+<script src="../jquery.cycle2.tile.min.js"></script>
+<script src="../jquery.cycle2.caption2.min.js"></script>
+<script src="../parallax.js-1.5.0/parallax.min.js"></script>
+<script src="../parallax.js-1.5.0/parallax.js"></script>
+
+
+<!-- Style -->
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(255,255,255,1.00);
+}
+/* CSS PROPERTY FOR TOP NAVIGATION BAR */
+#TopNavi {
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	height: 100px;
+    background-color: rgba(255,255,255,1.00);
+	left: 0;
+    top: 0;
+    width: 100%;
+	z-index: 4;
+	animation: 1s ease-out 0s 1 slidesInFromTop;
+
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding-left: 20px;
+    text-decoration: none;
+	font-family: "Helvetica";
+	top:25px;
+	font-size: 40px;
+	position: relative;
+
+}
+#homeNavButton {
+	background-color: rgba(255,255,255,1.00);
+	color: #000000;
+	padding: 0 5px 0 14px;
+	transition: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in;
+}
+#homeNavButton:hover{
+	color: #32a4cb;
+}
+#navImage img {
+	width: 100px;
+}
+
+#missionNavButton{
+	color: #248aad;
+}
+#buyNavButton{
+	transition: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in;
+}
+#buyNavButton:hover{
+	color: #32a4cb;
+}
+
+.hoverEffect > a {
+  color: #000;
+  text-decoration: none;
+}
+
+.hoverEffect > a:hover {
+  color: #000;
+}
+.hoverEffect > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.hoverEffect > a:hover:before {
+	background-color: #32a4cb;
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+/*ANIMATIONS*/
+
+
+@keyframes slidesInFromTop {
+  0% {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1 ;
+  }
+}
+
+#homeBody{
+	position: absolute;
+	width: 100%;
+	background-color: white;
+	top: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	padding: 0px 15px ;
+}
+.parallax {
+    /* Set a specific height */
+    min-height: 500px;
+}
+#homeBody p {
+	font-size: 50px;
+	text-align: center;
+	font-family: "Helvetica";
+	letter-spacing: 3px;
+	padding: 0px 0px 10px 0px;
+
+}
+.homeTable {
+  width: 70%;
+		z-index: 0;
+	padding: 0px 0px 30px 0px
+}
+	.image {
+		width:300px;
+		z-index: 0;
+	}
+
+	.homeTable th {
+		padding: 10px 50px;
+				z-index: 0;
+	}
+	#homeTable div {
+				z-index: 0;
+	}
+
+	#footer{
+		position: absolute;
+		width: 100%;
+		background: black;
+		height: 20px;
+		top: 100%;
+		left: 0px;
+		color: white;
+		font-size: 15px;
+		font-family: "Helvetica";
+		text-align: right;
+		letter-spacing: 3px
+	}
+
+	#nameChange {
+		font-size: 30px;
+		font-family: "Helvetica";
+		letter-spacing: 3px;
+		left: 0;
+		right: 0;
+	}
+	#teamImage{
+	align-content: center;
+	}
+
+	.navButtons {
+		font-size: 20px;
+		font-family: "Helvetica";
+		letter-spacing: 3px;
+	}
+
+</style>
+
+
+</head>
+
+<body>
+<!-- Header -->
+<!--THIS IS THE TOP NAVIGATION BAR-->
+<div class="container">
+<ul id="TopNavi">
+	<li id="navImage"><img src="../images/logo.png"></li>
+	<li class="hoverEffect"><a style="letter-spacing: 3px" id="homeNavButton" href="../">Home</a></li>
+	<li><a style="letter-spacing: 10px">|</a></li>
+	<li class="hoverEffect"><a style="letter-spacing: 3px" id="missionNavButton">Mission Statement</a></li>
+	<li><a style="letter-spacing: 10px">|</a></li>
+	<li class="hoverEffect"><a style="letter-spacing: 3px" id="buyNavButton" href="../Shop/">Buy Now!</a></li>
+</ul>
+	</div>
+
+<!-- Body -->
+	<div class="parallax" data-parallax="scroll" data-image-src="../images/navHomeImage.png"></div>
+<div id="homeBody">
+	<p>About Us</p>
+	<center>
+	<table class="homeTable" >
+		<tr>
+			<th>
+<div class="cycle-slideshow"
+	 data-cycle-fx="tileSlide" style="z-index: 0">
+          <img src="../images/clothing/1.png" class="image">
+          <img src="../images/clothing/2.png" class="image">
+          <img src="../images/clothing/3.png" class="image">
+        </div>
+			</th>
+
+			<th style="text-align: center"><p style="font-size: 18px">An idea sparked in the minds of four random and socially awkward teens with a passion of fashion, business, and web development started this company in a park in Elmhurst. These passions lead to our development. We wanted to combine our separate talents into one company to benefit the world’s fashion.</p></th>
+		</tr>
+		</table>
+
+		<p>Mission Statement</p>
+
+		<table class="homeTable" >
+	<tr>
+			<th><p style="font-size: 18px">Our mission from day one was to give the people a set of clothing that would adjust to their day. You could say that our clothing is the offspring of athleisure and formality. Best case scenario, we would wish to have clothing created to last the whole day, regardless of what activities you have to do. Just imagine how much money you could save if you only had to purchase one set of clothes for all of your activities!</p></th>
+
+			<th>
+<div class="cycle-slideshow"
+	 data-cycle-fx="tileSlide" style="z-index: 0">
+
+          <img src="../images/clothing/1.png" class="image">
+          <img src="../images/clothing/2.png" class="image">
+          <img src="../images/clothing/3.png" class="image">
+        </div>
+			</th>
+
+		</tr>
+	</table>
+
+  <p> Learn More About The Team</p>
+
+  <table class="homeTable">
+    <tr>
+      <th>
+          <div>
+            <img src="../images/andoni.jpg" class="image">
+          </div>
+		   </th>
+       <th><p style="font-size: 18px">He was born in Puebla, Mexico during the year 1991. As a child, he was constantly changing clothes as he had numerous daily activities. He dealt with this for years on end before he moved to New York and met his colleagues. Once he met them, the idea sparked in his head about having a set of clothes to last all day and still remain fashionable.</p></th>
+     </tr>
+     <tr>
+       <th>
+           <div>
+             <img src="../images/andy.jpg" class="image">
+           </div>
+ 		   </th>
+        <th><p style="font-size: 18px">He was born in Fuzhou, China during the year 1989. During his childhood, he would always wear the exact same set of clothes throughout the day. Turns out wearing a mao suit to a job interview isn’t particularly a good idea. Meeting his team was a great opportunity for implementing his ideas to the real world.</p></th>
+      </tr>
+      <tr>
+        <th>
+            <div>
+              <img src="../images/nathan.jpg" class="image">
+            </div>
+  		   </th>
+         <th><p style="font-size: 18px">Nathan grew up in a wealthy home but always got mad whenever anything wouldn't go his way. He ran away to his cousin’s house as he gets kicked out of his home. With this incident, he was left with very little left to sustain himself. With this, he developed his passion of public speaking. An idea sparked in his head as he wished to remain stylish.</p></th>
+       </tr>
+       <tr>
+         <th>
+             <div>
+               <img src="../images/chime.png" class="image">
+             </div>
+   		   </th>
+          <th><p style="font-size: 18px">A single individual bamboozled the entire army as she enlisted at a young age. She was forced to constantly wear army attire. As much she didn’t like it, she had to deal with it. After serving a whole two years, she felt like a normal human again. With this, she wanted to explore the sense of fashion, hence she had the idea of having one set of clothes to last the entire day.</p></th>
+        </tr>
+
+	<!-- Footer -->
+		<div id="footer">Made by Scions Inc. All Rights Reserved</div>
+
+
+    </div>
+	</div>
+	</center>
+
+</div>
+
+</body>
+</html>

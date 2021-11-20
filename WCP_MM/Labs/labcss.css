@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+
+@keyframes slidesInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+      50% { 
+        transform: translateY(15%);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1 ;
+    }
+}
+
+body {
+    background-color:#100440;
+
+}
+
+
+td {
+    padding: 10px;
+}
+
+li {
+    border: 2px solid black;
+    list-style-type: none;
+	width: 450px ;
+}
+
+h1 {
+	color: #ff9900;
+    font-family: "Fira Sans";
+	font-size: 80px;
+	letter-spacing: 8px;
+}
+h3 {
+	color: #ff9900;
+    font-family: "Fira Sans";
+	font-size: 50px;
+	letter-spacing: 8px;
+}
+
+.cool {
+    border: 5px;
+    border-radius: 35px;
+    text-align: center;
+    height: 200px;
+    padding: 40px;
+	font-size: 30px;
+    font-family: "Fira Sans";
+    color: #ff9900;
+	background-size: cover;
+    animation: 1s ease-out 0s 1 slidesInFromTop;
+    transition: all 0.2s;
+}
+
+.cool:hover {
+	text-shadow: 1px 1px 5px #000000;
+    color: white;
+	font-size: 35px;
+
+}
+
+a {
+    color: black;
+    font-size: 4em;
+    -webkit-transition: bgcolor 1s,color 2s;
+    transition: bgcolor 1s;
+    text-decoration: none;
+    transition: color ease 0.2s;
+}
+a:hover {
+    color: white;
+}
+
+span {
+    font-family: Impact;
+}
+#VDLink{
+	font-family: "Fira Sans";
+	color: #ff9900;
+}

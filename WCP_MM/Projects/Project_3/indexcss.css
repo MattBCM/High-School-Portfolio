@@ -1,0 +1,385 @@
+@charset "utf-8";
+/* CSS Document */
+body, html{
+		margin: 0;
+		padding: 0;	
+		}
+.section{
+		height: 100vh;
+		}
+#section1{
+	position: relative;
+	background-image: url(images/backgroundimage1.png);
+	background-size: cover;
+	background-color: aquamarine;
+}
+#section2{
+	background-image: url(images/back1.jpg);
+	background-size: cover;
+}
+#section3{
+	background-image: url(images/back2.jpg);
+	background-size: cover;
+}
+#section4{
+	background-color: cadetblue;
+}
+#projectTitle{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+  	left: 50%;
+  	margin-left: -452px;
+ 	top: 50%;
+  	margin-top: -100px;
+	font-family: Helvetica;
+	color: white;
+	font-size: 100px;
+	letter-spacing: 10px
+	
+}
+#projectName{
+	position: absolute;
+  	left: 50%;
+  	margin-left: -260px;
+ 	top: 50%;
+  	margin-top: 50px;
+	font-family: Helvetica;
+	color: white;
+	font-size: 50px;
+	letter-spacing: 10px
+}
+#podcast1Title{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: auto;
+  	left: 0;
+	right: 0;
+ 	top: 40%;
+  	margin-top: -100px;
+	font-family: Helvetica;
+	color: white;
+	font-size: 100px;
+	letter-spacing: 10px;
+	
+}
+#podcast2Title{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: auto;
+  	left: 0;
+	right: 0;
+ 	top: 40%;
+  	margin-top: -100px;
+	font-family: Helvetica;
+	color: white;
+	font-size: 100px;
+	letter-spacing: 10px;
+	
+}
+/* CSS PROPERTY FOR TOP NAVIGATION BAR */
+#TopNavi {
+    position: fixed;
+	color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	height: 50px;
+    background-color: rgba(0,0,0,0.7);
+	left: 0;
+    top: 0;
+    width: 100%;
+	z-index: 2;
+	animation: 1s ease-out 0s 1 slidesInFromTop;
+
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding-left: 20px;
+    text-decoration: none;
+	font-family: Helvetica;
+	font-weight: bold;
+	top:15px;
+	font-size: 20px;
+	position: relative;
+
+}
+#homeNavButton {
+	background-color: rgba(0,0,0,0,);
+	color: white;
+	padding: 0 5px 0 14px;
+	transition: all 0.3s ease-in;
+}
+#homeNavButton:hover{
+	color: #9E9E9E;
+}
+#navImage img {
+	width: 50px;
+	border-radius: 10px;
+}
+
+#podcast1NavButton{
+	color: white;
+	transition: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in;
+}
+#podcast1NavButton:hover{
+	color: #9E9E9E;
+}
+#podcast2NavButton{
+	color: white;
+	transition: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in;
+}
+#podcast2NavButton:hover{
+	color: #9E9E9E;
+}
+#podcast3NavButton{
+	color: white;
+	transition: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in;
+}
+#podcast3NavButton:hover{
+	color: #9E9E9E;
+}
+
+.hoverEffect > a {
+  color: #000;
+  text-decoration: none;
+}
+
+.hoverEffect > a:hover {
+  color: #000;
+}
+.hoverEffect > a:before {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 2px;
+  bottom: 0;
+  left: 1;
+  right: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.hoverEffect > a:hover:before {
+	background-color: white;;
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+#section2slide1{
+	margin-top: 275px;
+	background-image: url(images/john_von_neumann_hover.jpg);
+	background-size: cover;
+	transition: all 0.2s ease-in;
+}
+#section2slide1:hover{
+	background-image: url(images/john_von_neumann.jpg)
+}
+
+#section2slide2{
+	margin-top: 275px;
+	background-image: url(images/nuclearwar_hover.jpg);
+	background-size: cover;
+	transition: all 0.2s ease-in;
+}
+#section2slide2:hover{
+	background-image: url(images/nuclearwar.jpg);
+}
+#section2slide3{
+	margin-top: 285px;
+	background-image: url(images/babylift_hover.jpg);
+	background-size: cover;
+	transition: all 0.2s ease-in;
+}
+#section2slide3:hover{
+	background-image: url(images/babylift.jpg);
+}
+
+#section3slide1{
+	margin-top: 275px;
+	background-image: url(images/circular_hover.jpg);	
+	background-size: cover;
+	background-position: center;
+	transition: all 0.2s ease-in;
+}
+#section3slide1:hover{
+	background-image: url(images/circular.jpg);
+}
+#section3slide2{
+	margin-top: 275px;
+	background-image: url(images/mars_hover.jpg);	
+	background-size: cover;
+	background-position: center;
+	transition: all 0.2s ease-in;
+}
+#section3slide2:hover{
+	background-image: url(images/mars_.jpg);
+}
+#section3slide3{
+	margin-top: 275px;
+	background-image: url(images/public-speaking_hover.jpg);
+	background-size: cover;
+	background-position: center;
+	transition: all 0.2s ease-in;
+}
+#section3slide3:hover{
+	background-image: url(images/public-speaking.jpg);
+}
+#section2slide1TEXT{
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 850px;
+	font-family: Helvetica;
+	color: white;
+	font-size: 60px;
+	letter-spacing: 10px;
+	font-weight: bold;
+}
+#section2slide2TEXT{
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 850px;
+	font-family: Helvetica;
+	color: white;
+	font-size: 60px;
+	letter-spacing: 10px;
+	font-weight: bold;
+}
+#section2slide3TEXT{
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 830px;
+	font-family: Helvetica;
+	color: white;
+	font-size: 60px;
+	letter-spacing: 10px;
+	font-weight: bold;
+}
+#section3slide1TEXT{
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 850px;
+	font-family: Helvetica;
+	color: white;
+	font-size: 60px;
+	letter-spacing: 10px;
+	font-weight: bold;
+}
+#section3slide2TEXT{
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 850px;
+	font-family: Helvetica;
+	color: white;
+	font-size: 60px;
+	letter-spacing: 10px;
+	font-weight: bold;
+}
+#section3slide3TEXT{
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 850px;
+	font-family: Helvetica;
+	color: white;
+	font-size: 60px;
+	letter-spacing: 10px;
+	font-weight: bold;
+}
+.para{
+	position: relative;
+	width: 600px;
+	font-size: 30px;
+	margin: auto;
+	top: -800px;
+	left: 25%;
+	padding: 20px;
+	background-color: rgba(255,255,255,0.60);
+	border-radius: 5%;
+	font-family: helvetica;
+}
+.image-side{
+	width: 50%;
+	height: 120%;
+	margin-top: -5px;
+}
+/*ANIMATIONS*/
+
+
+@keyframes slidesInFromTop {
+  0% {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1 ;
+  }
+}
+/*Game Code*/
+#gameTEXT1{
+	padding: 10px 100px;
+	background-color: rgba(0,0,0,0.60);
+	text-align: center;
+	position: absolute;
+	top: 80vh;
+	left: -100px;
+	height: 200px;
+	width: 100%;
+	font-family: helvetica;
+	font-size: 40px;
+	color: white;
+}
+#buttonGame{
+	background-color: black;
+	width: 125px;
+	height: 75px;
+	position: absolute;
+	left: 90%;
+	top: 75%;
+	color: white;
+	font-size: 20px;
+}
+#scenes{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(images/scene1.png);
+	background-size: cover;
+}
+.media{
+	position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+}
+.image-side, .hoverEffect{
+	cursor: pointer;
+}

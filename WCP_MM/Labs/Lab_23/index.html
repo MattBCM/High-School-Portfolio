@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab #23</title>
+</head>
+<body>
+ <ul>
+  		<li id="homepageimage" ><img src="../../Index/my_logo_beta.png" width="80" style="padding: 10px 10px" id="topImage"> </li>
+  		<li><p style="letter-spacing: 10px" class="titlehomepage" id="navBar">Lab #23 - Hold Shift and Check Checkbox</p></li>
+	</ul>
+  <style>
+    html body{
+      font-family: sans-serif;
+      background: #ffc600;
+	  margin: 0;
+		background: url(../../Projects/Project_6/background.png);
+		background-size: cover;
+    }
+    .inbox {
+      max-width: 400px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+	left: 0;
+	right: 0;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	text-align: center;
+	vertical-align: middle;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #F1F1F1;
+    }
+    .item:last-child {
+      border-bottom: 0;
+    }
+    input:checked + p {
+      background: #F9F9F9;
+      text-decoration: line-through;
+    }
+    input[type="checkbox"] {
+      margin: 20px;
+    }
+    #somethin {
+      margin: 0;
+      padding: 20px;
+      transition: background 0.2s;
+      flex: 1;
+      font-family: 'helvetica neue';
+      font-size: 20px;
+      font-weight: 200;
+      border-left: 1px solid #D1E2FF;
+    }
+	  ul {
+    	position: fixed;
+    	list-style-type: none;
+    	margin: 0;
+   	 	padding: 0;
+    	overflow: hidden;
+    	background-color: rgba(24,24,24,0.86);
+    	position: fixed;
+    	top: 0;
+    	width: 100%;
+		z-index: 1;
+	
+}
+
+	li {
+   	 	float: left;
+}
+
+	li #navBar{
+    	display: block;
+    	color: white;
+    	text-align: center;
+   	 	padding-left: 20px;
+    	text-decoration: none;
+		font-family: "Helvetica";
+		font-size: 32px;
+	
+}
+	#topImage {
+		border-radius: 20px;
+}
+	  #topImage:hover{
+		  cursor: pointer;
+	  }
+  </style>
+   <!--
+   The following is a common layout you would see in an email client.
+   When a user clicks a checkbox, holds Shift, and then clicks another checkbox a few rows down, all the checkboxes in-between those two checkboxes should be checked.
+  -->
+  <div class="inbox">
+    <div class="item">
+      <input type="checkbox">
+      <p class="somethin">This is an inbox layout.</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p class="somethin">Check one item</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p class="somethin">Hold down your Shift key</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p class="somethin">Check a lower item</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p class="somethin">Everything in between should also be set to checked</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p class="somethin">Try do it without any libraries</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p class="somethin">Just regular JavaScript</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p class="somethin">Good Luck!</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p class="somethin">Don't forget to tweet your result!</p>
+    </div>
+  </div>
+<script src="../../jquery331min.js"></script>
+<script>
+	
+//THIS JQUERY FUNCTION ALLOWS THE LOGO IMAGE TO TAKE YOU BACK TO THE MAIN INDEX	
+			
+		$("#homepageimage").click(function(){
+			var img = $("#topImage");
+			img.animate({ width: '70px', padding: '20px 20px' }, 250);
+			img.animate({ width: '80px', padding: '10px 10px' }, 250);
+			location.href = "../../../";
+			});	
+	
+const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+let lastChecked;
+function handleCheck(e) {
+  // Check if they had the shift key down
+  // AND check that they are checking it
+  let inBetween = false;
+  if (e.shiftKey && this.checked) {
+    // go ahead and do what we please
+    // loop over every single checkbox
+    checkboxes.forEach(checkbox => {
+      console.log(checkbox);
+      if (checkbox === this || checkbox === lastChecked) {
+        inBetween = !inBetween;
+        console.log('Starting to check them in between!');
+      }
+      if (inBetween) {
+        checkbox.checked = true;
+      }
+    });
+  }
+  lastChecked = this;
+}
+checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+</script>
+</body>
+</html>

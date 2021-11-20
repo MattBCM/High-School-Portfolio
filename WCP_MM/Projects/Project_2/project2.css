@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(255,255,255,1.00);
+}
+/* CSS PROPERTY FOR TOP NAVIGATION BAR */
+#TopNavi {
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	height: 100px;
+    background-color: rgba(255,255,255,1.00);
+	left: 0;
+    top: 0;
+    width: 100%;
+	z-index: 2;
+	animation: 1s ease-out 0s 1 slidesInFromTop;
+
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding-left: 20px;
+    text-decoration: none;
+	font-family: "Helvetica";
+	top:25px;
+	font-size: 40px;
+	position: relative;
+
+}
+#homeNavButton {
+	background-color: rgba(255,255,255,1.00);
+	color: #248aad;
+	padding: 0 5px 0 14px;
+}
+#navImage img {
+	width: 100px;
+}
+
+#missionNavButton{
+	transition: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in;
+}
+#missionNavButton:hover{
+	color: #32a4cb;
+}
+#buyNavButton{
+	transition: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in;
+}
+#buyNavButton:hover{
+	color: #32a4cb;
+}
+
+.hoverEffect > a {
+  color: #000;
+  text-decoration: none;
+}
+
+.hoverEffect > a:hover {
+  color: #000;
+}
+.hoverEffect > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.hoverEffect > a:hover:before {
+	background-color: #32a4cb;
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*ANIMATIONS*/
+
+
+@keyframes slidesInFromTop {
+  0% {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1 ;
+  }
+}
+
+.homeBody{
+	width: 100%;
+	background-color: rgba(237,237,237,1.00);
+	top: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	padding: 0px 15px ;
+}
+.parallax {
+    /* Set a specific height */
+    min-height: 500px;
+}
+.homeBody p {
+	font-size: 50px;
+	text-align: center;
+	font-family: "Helvetica";
+	letter-spacing: 3px;
+	padding: 0px 0px 10px 0px;
+
+}
+#homeTable {
+  width: 50%;
+		z-index: 0;
+	padding: 0px 0px 30px 0px
+
+
+}
+	.image {
+		width: 500px;
+		z-index: 0;
+	}
+
+	#homeTable th {
+		padding: 10px 50px;
+				z-index: 0;
+	}
+	#homeTable div {
+				z-index: 0;
+	}
+
+	#footer{
+		width: 100%;
+		background: black;
+		height: 20px;
+		left: 0px;
+		color: white;
+		font-size: 15px;
+		font-family: "Helvetica";
+		text-align: right;
+		letter-spacing: 3px
+	}
+
+	#nameChange {
+		font-size: 30px;
+		font-family: "Helvetica";
+		letter-spacing: 3px;
+		left: 0;
+		right: 0;
+	}
+	#teamImage{
+	align-content: center;
+	}
+	.navButtons {
+		font-size: 20px;
+		font-family: "Helvetica";
+		letter-spacing: 3px;
+    cursor: pointer;
+	}
+	.center {
+		padding: 0 0 0 10px;
+	}

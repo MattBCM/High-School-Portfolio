@@ -1,0 +1,270 @@
+/* CSS Document */
+body{
+	margin:0;
+	background-image: url(Index/FFBE_Argus_Plains_BG.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+/* CSS PROPERTY FOR TOP NAVIGATION BAR */
+#TopNavi {
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(22,22,22,0.87);
+    top: 0;
+    width: 100%;
+	z-index: 1;
+	
+}
+
+li {
+    float: left;
+}
+
+li p {
+    display: block;
+    color: white;
+    text-align: center;
+    padding-left: 20px;
+    text-decoration: none;
+	font-family: "Helvetica";
+	font-size: 50px;
+	
+}
+/* CSS PROPERTY FOR LABS MENU BAR */
+#labs p {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	top: 200px;
+	background-image: url(Index/labstest2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 50px;
+	font-size: 25px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	font-family: Helvetica;
+	transition-duration: 0.5s;
+	transition-property: all;
+	transition-timing-function: ease;
+	border-top:4px;
+	border-right: 4px;
+	border-bottom: 4px;
+	border-left: 0px;
+	border-style: solid;
+}
+
+/* CSS PROPERTY FOR PROJECT MENU BAR */
+
+#projects p {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	top: 300px;
+	background-image: url(Index/projecttest2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 50px;
+	font-size: 25px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	font-family: Helvetica;
+	border-top:4px;
+	border-right: 4px;
+	border-bottom: 4px;
+	border-left: 0px;
+	border-style: solid;
+	transition-duration: 0.5s;
+	transition-property: all;
+	transition-timing-function: ease;
+}
+
+/* CSS PROPERTY FOR BLOGGER MENU BAR */
+
+#Blogger p {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	top: 400px;
+	background-image: url(Index/bloggertest2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 50px;
+	font-size: 25px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	font-family: Helvetica;
+	border-top:4px;
+	border-right: 4px;
+	border-bottom: 4px;
+	border-left: 0px;
+	border-style: solid;
+	transition-duration: 0.5s;
+	transition-property: all;
+	transition-timing-function: ease;
+}
+
+/* CSS PROPERTY FOR TECHTEACH MANU BAR */
+
+#TechTeach p {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	top: 500px;
+	background-image: url(Index/techteachtest2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 50px;
+	font-size: 18px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	font-family: Helvetica;
+	border-top:4px;
+	border-right: 4px;
+	border-bottom: 4px;
+	border-left: 0px;
+	border-style: solid;
+	transition-duration: 0.5s;
+	transition-property: all;
+	transition-timing-function: ease;
+}
+
+/* CSS PROPERTY FOR VISUAL DESIGN MENU BAR */
+
+#VD p {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	top: 200px;
+	right: 0;
+	font-size: 23px;;
+	font-family: Helvetica;
+	width: 150px;
+	height: 60px;
+	background-color: rgba(255,255,255,0.70);
+	border-top:4px;
+	border-right: 0px;
+	border-bottom: 4px;
+	border-left: 4px;
+	border-style: solid;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	transition-duration: 0.5s;
+	transition-property: all;
+	transition-timing-function: ease;
+}
+
+/* CSS PROPERTY FOR DIGITAL DESIGN MENU BAR */
+
+#DD p {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	top: 400px;
+	right: 0;
+	font-size: 23px;;
+	font-family: Helvetica;
+	width: 150px;
+	height: 60px;
+	border-top:4px;
+	border-right: 0px;
+	border-bottom: 4px;
+	border-left: 4px;
+	border-style: solid;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	background-color: rgba(255,255,255,0.70);
+	transition-duration: 0.5s;
+	transition-property: all;
+	transition-timing-function: ease;
+}
+
+/* CSS PROPERTY FOR HOVER ANIMATION WHICH EACH RESPECTIVE 
+MENU BAR. SOME MAY NEED TO CHANGE IN THE FUTURE*/
+
+
+#labs p:hover{
+	width: 200px;
+	background: url(Index/labstest.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-size: 50px;
+	color: white;
+	text-shadow: 1px 1px 5px #000000;	
+}
+#projects p:hover{
+	width: 200px;
+	background-image: url(Index/projecttest.png);
+	font-size: 40px;
+	color: white;
+	text-shadow: 1px 1px 5px #000000;	
+}
+#Blogger p:hover{
+	width: 200px;
+	background-image: url(Index/bloggertest.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-size: 40px;
+	color: white;
+	text-shadow: 1px 1px 5px #000000;
+}
+#TechTeach p:hover{
+	width: 200px;
+	background-image: url(Index/techteachtest.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-size: 40px;
+	color: white;
+	text-shadow: 1px 1px 5px #000000;
+}
+#VD p:hover{
+	width: 300px;
+	font-size: 45px;
+	color: white;
+	text-shadow: 1px 1px 5px #000000;
+	background-color: rgba(0,0,0,0.70);
+}
+#DD p:hover{
+	width: 300px;
+	font-size: 45px;
+	color: white;
+	text-shadow: 1px 1px 5px #000000;
+	background-color: rgba(0,0,0,0.70);
+}
+
+/* CSS PROPERTY FOR INFORMATION AT THE MIDDLE, BASICALLY STUFF ABOUT ME */
+
+#Statememt{
+position: absolute;
+top: 200px;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+width: 60%;
+background-color: rgba(24,24,24,0.86);
+color: white;
+font-family: "Helvetica";
+border-radius: 20px;
+padding: 0px 15px;
+font-size: 30px;
+	
+}
+/* CSS PROPERTY FOR HOMEPAGE LOGO AT THE TOP LEFT */
+.homepageImage {
+	width: 300px;
+}
+#topImage{
+	border-radius: 20px;
+}
+a {
+	color: black;
+}

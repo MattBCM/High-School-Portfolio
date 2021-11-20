@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab #25: Key Detection</title>
+ <!-- <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script> -->
+ <style>
+	 body, html{
+		 margin: 0;
+		 background-image: url(../../Projects/Project_6/background.png);
+		 background-size: cover;
+	 }
+	 img{
+		 margin: auto;
+		 width: 200px;
+		 
+	 }
+	 ul {
+    	position: fixed;
+    	list-style-type: none;
+    	margin: 0;
+   	 	padding: 0;
+    	overflow: hidden;
+    	background-color: rgba(24,24,24,0.86);
+    	position: fixed;
+    	top: 0;
+    	width: 100%;
+		z-index: 1;
+	
+}
+
+	li {
+   	 	float: left;
+}
+
+	li p {
+    	display: block;
+    	color: white;
+    	text-align: center;
+   	 	padding-left: 20px;
+    	text-decoration: none;
+		font-family: "Helvetica";
+		font-size: 32px;
+	
+}
+	#topImage {
+		border-radius: 20px;
+		width: 80px;
+}
+	 #topImage:hover{
+		 cursor: pointer;
+	 }
+	 #info{
+		 margin: auto;
+  	left: 0;
+	right: 0;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	text-align: center;
+	vertical-align: middle;
+	font-size: 50px;
+	font-family: Helvetica;
+	 }
+</style>
+</head>
+<body>
+<ul>
+  		<li id="homepageimage" ><img src="../../Index/my_logo_beta.png" width="80" style="padding: 10px 10px" id="topImage"> </li>
+  		<li><p style="letter-spacing: 10px" class="titlehomepage">Lab #25 - Key Detection</p></li>
+	</ul>
+	
+<p id="info">Type in the code: Matt</p>
+	
+<script src="../../jquery331min.js"></script>
+<script>
+	
+//THIS JQUERY FUNCTION ALLOWS THE LOGO IMAGE TO TAKE YOU BACK TO THE MAIN INDEX	
+			
+		$("#homepageimage").click(function(){
+			var img = $("#topImage");
+			img.animate({ width: '70px', padding: '20px 20px' }, 250);
+			img.animate({ width: '80px', padding: '10px 10px' }, 250);
+			location.href = "../../../";
+			});	
+	
+	
+const pressed = [];
+const secretCode = 'matt';
+window.addEventListener('keyup', (e) => {
+  console.log(e.key);
+  pressed.push(e.key);
+  pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+  if (pressed.join('').includes(secretCode)) {
+    console.log('DING DING!');
+    // cornify_add();
+	 var x = Math.floor(Math.random() * 1920);
+	 var y = Math.floor(Math.random() * 1080);
+   var img = document.createElement("img");
+   img.setAttribute("src", "akash.jpg");
+   img.style.position = 'absolute';
+   img.style.left = x + 'px';
+   img.style.top = y + 'px';
+   document.body.appendChild(img);
+	  console.log(x);
+  }
+  console.log(pressed);
+});
+</script>
+</body>
+</html>
